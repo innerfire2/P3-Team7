@@ -28,9 +28,8 @@ function listAllPersons() {
 // Fragt nach dem Namen einer Person und legt diese in unsere "Datenbank"
 function addNewPerson() {
   readline.question("Wie soll die Person heißen?\n", (name) => {
-    const person = new Person({ id: uuid(), name: name }); // Hier erzeugen wir eine neue Instanz mit einer von dem UUID Paket erzeugten ID und dem eingegebenen Namen.
-    person.save(); // Speichert die Person in unserer "Datenbank"
-    showMenu(); // Damit das Programm nach der Verarbeitung nicht "stehen bleibt". Springen wir wieder in die "showMenu" Funktion
+    Person.create((name = name));
+    showMenu();
   });
 }
 
@@ -49,10 +48,8 @@ function findPerson() {
   });
 }
 
-function createRandomPerson() {
-  const person = new Person({ id: uuid(), name: faker.name.firstName() });
-  person.save();
-  showMenu();
+function createRandomPerson(name) {
+  Person.create((name = faker.name.firstName()));
 }
 
 // Zeigt unser "Hauptmenü", in dem eine Auswahl über eine Aktion getroffen werden kann.
