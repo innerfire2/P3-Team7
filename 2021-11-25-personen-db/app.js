@@ -28,7 +28,7 @@ function listAllPersons() {
 // Fragt nach dem Namen einer Person und legt diese in unsere "Datenbank"
 function addNewPerson() {
   readline.question("Wie soll die Person heißen?\n", (name) => {
-    Person.create((name = name));
+    Person.create(name);
     showMenu();
   });
 }

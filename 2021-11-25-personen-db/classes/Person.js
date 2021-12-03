@@ -28,6 +28,7 @@ export default class Person {
   static create(name) {
     const person = new Person({ id: uuid(), name: name });
     person.save();
+    return person;
   }
 
   // Gibt die aktuelle Person in der Konsole aus
