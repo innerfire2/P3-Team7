@@ -31,6 +31,16 @@ export default class Person {
     return person;
   }
 
+  static delete(id) {
+    const data = personsData.find((object) => object.id === id); // Durchläfut das Array und gibt den ersten Treffer zurück. Dieser wird in die "data" variabel geschrieben
+    if (data) {
+      // Wenn ein Datensatz gefunden wurde ...
+      const personIndex = personsData.indexOf(data);
+      personsData.splice(personIndex, 1);
+    }
+    console.log("Es wurde keine Person mit dieser Id gefunden.");
+  }
+
   // Gibt die aktuelle Person in der Konsole aus
   log() {
     console.log(`- (${this.id}) ${this.name}`);

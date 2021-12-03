@@ -15,6 +15,7 @@ const question = `Was möchtest du machen?
 2: Person anlegen
 3: Person suchen
 4: Zufällige Person anlegen
+5: Person löschen
 `;
 
 // Lädt alle Personen und gibt den Namen und die ID per console.log aus
@@ -42,14 +43,24 @@ function findPerson() {
       person.log(); // Ausgabe der Person
     } else {
       // Person wurde nicht gefunden
-      console.log("Nicht gefunden"); // info an Anwender:in
-    }
+      console.log("Nicht gefunden");
+    } // i
     showMenu(); // Damit das Programm nach der Verarbeitung nicht "stehen bleibt". Springen wir wieder in die "showMenu" Funktion
   });
 }
 
 function createRandomPerson(name) {
   Person.create((name = faker.name.firstName()));
+}
+
+function deletePerson() {
+  readline.question(
+    "Wie ist die Id der Person, die Sie löschen möchten?\n",
+    (id) => {
+      Person.delete(id);
+      showMenu();
+    }
+  );
 }
 
 // Zeigt unser "Hauptmenü", in dem eine Auswahl über eine Aktion getroffen werden kann.
@@ -65,6 +76,8 @@ function showMenu() {
       return; // Weil wir hier eine neue Texteingabe vom User:in abfragen, brechen wir das weitere verabeiten der Funktion ab.
     } else if (answer === "4") {
       createRandomPerson();
+    } else if (answer === "5") {
+      deletePerson();
     }
     showMenu(); // Im normalfall wollen wir wieder das Menu zeichnen, do sonst unser Script hängen bleiben würde.
   });
