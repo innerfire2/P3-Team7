@@ -1,10 +1,15 @@
 import { persons as personsData } from "../data/model_data.js"; // Nur in der Person Klasse wird die "Datenbank" geladen. Das "as" gibt uns einen besseren Namen um es nicht mit der Klasse zu verwechseln.
 import { v4 as uuid } from "uuid";
 export default class Person {
-  constructor({ id, name }) {
+  constructor({ id, name, lastName }) {
     // Hier werden aus dem übergebenen Parameter id und name herausgeladen; Der Parameter ist eigentlich so etwas: { id: 1, name: "Peter" }
     this.id = id;
     this.name = name;
+    this.lastName = lastName;
+  }
+
+  fullName() {
+    return this.name + " " + this.lastName;
   }
 
   // Liefert zu allen Datensätzen eine Person zurück
@@ -25,8 +30,8 @@ export default class Person {
     return null; // ... Wenn nicht geben wir `null` zurück. Dieser Fall tritt nur ein, wenn kein Datensatz gefunden wurde, weil ansonsten `return` das Programm vorher abbricht.
   }
 
-  static create(name) {
-    const person = new Person({ id: uuid(), name: name });
+  static create(name, lastName) {
+    const person = new Person({ id: uuid(), name: name, lastName: lastName });
     person.save();
     return person;
   }
@@ -43,7 +48,7 @@ export default class Person {
 
   // Gibt die aktuelle Person in der Konsole aus
   log() {
-    console.log(`- (${this.id}) ${this.name}`);
+    console.log(`- (${this.id}) ${this.fullName()}`);
   }
 
   // Speichert die Person in die "Datenbank". Wir holen uns aus der Person die benötigten Daten. Gespeichert wird nicht die Information über die Klasse, sondern nur die reinen Daten.
@@ -52,6 +57,7 @@ export default class Person {
       // fügt dem Datensatz-Array ein Eintrag hinzu
       id: this.id,
       name: this.name,
+      lastName: this.lastName,
     });
   }
 }

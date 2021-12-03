@@ -28,8 +28,10 @@ function listAllPersons() {
 
 // Fragt nach dem Namen einer Person und legt diese in unsere "Datenbank"
 function addNewPerson() {
-  readline.question("Wie soll die Person heißen?\n", (name) => {
-    Person.create(name);
+  readline.question("Wie soll die Person heißen?\n", (input) => {
+    const splitedInput = input.split(" ");
+    console.log(splitedInput[1]);
+    Person.create(splitedInput[0], splitedInput[1]);
     showMenu();
   });
 }
@@ -49,8 +51,8 @@ function findPerson() {
   });
 }
 
-function createRandomPerson(name) {
-  Person.create((name = faker.name.firstName()));
+function createRandomPerson() {
+  Person.create(faker.name.firstName(), faker.name.lastName());
 }
 
 function deletePerson() {
