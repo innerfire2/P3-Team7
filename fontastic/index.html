@@ -49,13 +49,6 @@
       vr-mode-ui="enabled: false;"
       arjs="debugUIEnabled: false;"
     >
-      <a-assets>
-        <a-asset-item
-          id="exoFont"
-          src="fonts/exoBlack.typeface.json"
-        ></a-asset-item>
-      </a-assets>
-
       <!-- 2D text -->
       <a-marker type="pattern" url="data/kanji.patt">
         <!-- positioning a plane directly below text for increased visibility; need to adjust position to avoid z-fighting.  -->
@@ -70,7 +63,6 @@
         <!-- for more properties, see https://github.com/aframevr/aframe/blob/master/docs/components/text.md -->
         <a-text
           value="Hello, world!"
-          font="fonts/Exo2Bold.fnt"
           color="red"
           rotation="-90 0 0"
           align="center"
