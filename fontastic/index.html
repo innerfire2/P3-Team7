@@ -1,52 +1,70 @@
-<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
-<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+<!DOCTYPE html>
+<html>
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <script src="js/aframe.min.js"></script>
+  <script src="js/aframe-ar.js"></script>
 
-<style>
-  .arjs-loader {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  <!-- support 3D text -->
+  <script src="js/aframe-text-geometry-component.min.js"></script>
 
-  .arjs-loader div {
-    text-align: center;
-    font-size: 1.25em;
-    color: white;
-  }
-</style>
-
-<body style="margin: 0px; overflow: hidden">
-  <!-- minimal loader shown until image descriptors are loaded -->
-  <div class="arjs-loader">
-    <div>Loading, please wait...</div>
-  </div>
-  <a-scene
-    vr-mode-ui="enabled: false;"
-    renderer="logarithmicDepthBuffer: true;"
-    embedded
-    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
-  >
-    <!-- we use cors proxy to avoid cross-origin problems -->
-    <a-nft
-      type="nft"
-      url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex"
-      smooth="true"
-      smoothCount="10"
-      smoothTolerance=".01"
-      smoothThreshold="5"
+  <body style="margin: 0px; overflow: hidden">
+    <a-scene
+      embedded
+      vr-mode-ui="enabled: false;"
+      arjs="debugUIEnabled: false;"
     >
-      <a-entity
-        bmfont-text="text: HELLO!; color: #333"
-        position="0 0 -5"
-      ></a-entity>
-    </a-nft>
-    <a-entity camera></a-entity>
-  </a-scene>
-</body>
+      <a-assets>
+        <a-asset-item
+          id="exoFont"
+          src="fonts/exoBlack.typeface.json"
+        ></a-asset-item>
+        <img id="pixels" src="images/pixels.png" />
+      </a-assets>
+
+      <!-- 2D text -->
+      <a-marker type="pattern" url="data/kanji.patt">
+        <!-- positioning a plane directly below text for increased visibility; need to adjust position to avoid z-fighting.  -->
+        <a-plane
+          color="white"
+          rotation="-90 0 0"
+          position="0 -0.25 0"
+          width="3"
+          material="transparent: true; opacity: 0.90"
+        ></a-plane>
+
+        <!-- for more properties, see https://github.com/aframevr/aframe/blob/master/docs/components/text.md -->
+        <a-text
+          value="Hello, world!"
+          font="fonts/Exo2Bold.fnt"
+          color="red"
+          rotation="-90 0 0"
+          align="center"
+          scale="2 2 2"
+        ></a-text>
+
+        <!-- positioning a second copy to attempt drop-shadow effect; need to adjust position to avoid z-fighting -->
+        <!-- <a-text value="Hello, world!" font="fonts/Exo2Bold.fnt" color="black" rotation="-90 0 0" align="center" scale="2 2 2" position="0.01 -0.2 0"></a-text> -->
+
+        <!-- avoiding z-fighting is difficult; may want to render canvas to text instead -->
+      </a-marker>
+
+      <!-- 3D text -->
+      <a-marker type="pattern" url="data/hiro.patt">
+        <!-- 
+			using aframe-text-geometry component
+			can set: bevelSize, bevelThickness, curveSegments, font, height, size, style, value.
+			alignment (centering) may be tricky; try calculating bounding box and repositioning.
+			for more info, see: https://www.npmjs.com/package/aframe-text-geometry-component
+		 -->
+        <a-entity
+          text-geometry="value: Hello, world!; font: #exoFont;"
+          material="color: yellow; src: #pixels; repeat: 0.5 0.5;"
+          rotation="-90 0 0"
+        >
+        </a-entity>
+      </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
