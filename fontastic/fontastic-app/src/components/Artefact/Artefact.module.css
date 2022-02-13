@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 30px; */
+}
+
+.card {
+  margin-top: 30px;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.16);
+  width: 283px;
+  cursor: pointer;
+}
+
+.imageContainer {
+  width: 257px;
+  height: 163px;
+  margin: 13px;
+  margin-top: 11px;
+}
+
+.lowerContainer {
+  background-color: rgb(222, 232, 240);
+}
+
+.lowerContainer > span {
+  font-family: "Karla", sans-serif;
+  font-size: 12px;
+  float: left;
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 6px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Artefact title */
+.upperContainer > p {
+  font-family: "Poppins", sans-serif;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-top: 8px;
+  margin-bottom: 11px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Artfact Learning */
+.lowerContainer > h3 {
+  color: #99dcdb;
+  float: left;
+  margin-bottom: 20px;
+}
+.learning {
+  font-family: "Karla", sans-serif;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.bulbIcon {
+  color: #99dcdb;
+  font-size: 30px;
+  margin-top: 9px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  margin-right: 4px;
+  float: left;
+}
+.BackArrow {
+  float: left;
+  margin-top: 14px;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}

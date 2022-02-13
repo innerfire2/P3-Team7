@@ -1,0 +1,22 @@
+.headerContainer {
+  background-color: #3b2d60;
+  /* z-index: 1;*/
+  /* position: fixed; */
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 38px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+.headerContainer p {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 30px;
+}
+
+.headerContainer > span {
+  color: #ffdd9b;
+  font-size: 18px;
+  text-align: center;
+}
