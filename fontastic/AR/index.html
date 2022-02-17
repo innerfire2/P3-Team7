@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-  <script src="//aframe.io/releases/1.0.4/aframe.min.js"></script>
-  <script src="//raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
-  <script>
-    window.onload = function () {
-      document
-        .querySelector(".say-hi-button")
-        .addEventListener("click", function () {
-          // here you can change also a-scene or a-entity properties, like
-          // changing your 3D model source, size, position and so on
-          // or you can just open links, trigger actions...
-          alert("Hi there!");
-        });
-    };
-  </script>
   <style>
+    .arjs-loader {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .arjs-loader div {
+      text-align: center;
+      font-size: 1.25em;
+      color: white;
+    }
+
     .buttons {
       position: absolute;
       bottom: 0;
@@ -39,7 +45,25 @@
       height: 2em;
     }
   </style>
+
+  <script>
+    window.onload = function () {
+      document
+        .querySelector(".say-hi-button")
+        .addEventListener("click", function () {
+          // here you can change also a-scene or a-entity properties, like
+          // changing your 3D model source, size, position and so on
+          // or you can just open links, trigger actions...
+          alert("Hi there!");
+        });
+    };
+  </script>
+
   <body style="margin: 0px; overflow: hidden">
+    <div class="arjs-loader">
+      <div>Loading, please wait...</div>
+    </div>
+
     <div class="buttons">
       <button class="say-hi-button">SAY HI!</button>
     </div>
@@ -47,7 +71,8 @@
     <a-scene
       embedded
       vr-mode-ui="enabled: false;"
-      arjs="debugUIEnabled: false;"
+      renderer="logarithmicDepthBuffer: true;"
+      arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
     >
       <a-assets>
         <a-asset-item
@@ -57,9 +82,23 @@
         <img id="pixels" src="./images/pixels.png" />
       </a-assets>
 
-      <!-- 2D text -->
-      <a-marker type="pattern" url="data/kanji.patt">
-        <!-- positioning a plane directly below text for increased visibility; need to adjust position to avoid z-fighting.  -->
+      <a-nft
+        markerhandler
+        type="nft"
+        url=".\fontastic\AR\imageDescriptors\lebendigerGeist"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance=".01"
+        smoothThreshold="5"
+      >
+        <a-text
+          value="Parking"
+          color="red"
+          position="0 0 0"
+          scale="350 350 350"
+          side="double"
+        ></a-text>
+
         <a-plane
           color="white"
           rotation="-90 0 0"
@@ -74,15 +113,16 @@
           font="./fonts/Exo2Bold.fnt"
           color="red"
           rotation="-90 0 0"
-          align="center"
           scale="2 2 2"
         ></a-text>
+
+        <!-- positioning a plane directly below text for increased visibility; need to adjust position to avoid z-fighting.  -->
 
         <!-- positioning a second copy to attempt drop-shadow effect; need to adjust position to avoid z-fighting -->
         <!-- <a-text value="Hello, world!" font="fonts/Exo2Bold.fnt" color="black" rotation="-90 0 0" align="center" scale="2 2 2" position="0.01 -0.2 0"></a-text> -->
 
         <!-- avoiding z-fighting is difficult; may want to render canvas to text instead -->
-      </a-marker>
+      </a-nft>
 
       <a-entity camera></a-entity>
     </a-scene>
