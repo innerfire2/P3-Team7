@@ -1,0 +1,9 @@
+.screen {
+  background-color: #bec9e8;
+  height: 100%vh;
+  margin-top: -22px;
+}
+.screen > h1 {
+  padding-top: 20px;
+  font-size: 25px;
+}
