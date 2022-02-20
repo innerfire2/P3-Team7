@@ -32,9 +32,12 @@ export default function ArtefactScreen({ artefactData, closeHandler }) {
           <h3 className={styles.learning}>
             LEARNING <IoBulb className={styles.bulbIcon} />
           </h3>{" "}
-          <p>{artefactData.learningText}</p>
+          <p>{artefactData.learningText1}</p>
+          <p>{artefactData.learningText2}</p>
         </div>
-        <button onClick={AlertMsg}>AR Button</button>
+        <button onClick={AlertMsg}>
+          <circle>AR</circle>AR Funktion ausprobieren
+        </button>
       </div>{" "}
     </div>
   );

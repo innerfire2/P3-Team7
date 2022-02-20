@@ -1,21 +1,37 @@
+.header {
+  background-color: #3b2d60;
+  position: fixed;
+  width: 100%;
+}
+.Navigation {
+  background-color: #3b2d60;
+  margin-bottom: -25px;
+  width: 100%;
+  position: sticky;
+}
 .headerContainer {
   background-color: #3b2d60;
-  /* z-index: 1;*/
-  /* position: fixed; */
+  padding: 0px;
   width: 100%;
-  padding-top: 10px;
-  padding-bottom: 38px;
+  padding-bottom: 20px;
   color: white;
   font-family: "Poppins", sans-serif;
-  text-align: center;
-}
-.headerContainer p {
-  text-align: center;
-  margin-bottom: 5px;
-  font-size: 30px;
 }
 
 .headerContainer > span {
+  color: #ffdd9b;
+  font-size: 18px;
+}
+.textContainer {
+  padding: 0px;
+}
+
+.textContainer > p {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.textContainer > span {
   color: #ffdd9b;
   font-size: 18px;
   text-align: center;

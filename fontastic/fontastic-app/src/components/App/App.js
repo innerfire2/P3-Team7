@@ -1,9 +1,11 @@
 import Header from "../Header/Header.js";
 // import Artefact from "../Artefact/Artefact";
 import ArtefactScreenOverview from "../ArtefactScreenOverview/ArtefactScreenOverview.js";
-import artefactData from "../../artefactData.js";
+// import artefactData from "../../artefactData.js";
 // import ArtefactScreen from "../ArtefactScreen/ArtefactScreen.js";
 // import styles from "./ArtefactScreen.module.css";
+import About from "../AboutScreen/About.js";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 function App() {
@@ -11,8 +13,13 @@ function App() {
     <div className="bg-Container">
       <Header />
       <div className="app-Container">
-        <ArtefactScreenOverview artefactData={artefactData} />
-        {/* <ArtefactScreen artefactData={artefactData} /> */}
+        {" "}
+        <Routes>
+          <Route path="/" element={<ArtefactScreenOverview />} />
+          <Route path="about" element={<About />} />{" "}
+          {/* <ArtefactScreenOverview artefactData={artefactData} /> */}
+          {/* <ArtefactScreen artefactData={artefactData} /> */}
+        </Routes>
       </div>
     </div>
   );
