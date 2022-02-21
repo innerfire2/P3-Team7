@@ -1,11 +1,19 @@
 import styles from "./Header.module.css";
+import Navigation from "../Navigation/Navigation.js";
 
-export default function Header() {
+function Header() {
   return (
-    <div className={styles.headerContainer}>
-      {/* Menu-Icon adden */}
-      <p>Header</p>
-      <span>Untertitel</span>
-    </div>
+    <header className={styles.header}>
+      <div className={styles.Navigation}>
+        <Navigation />
+      </div>
+      <div className={styles.headerContainer}>
+        <div className={styles.textContainer}>
+          <p>Header</p>
+          <span>Untertitel</span>
+        </div>
+      </div>
+    </header>
   );
 }
+export default Header;
