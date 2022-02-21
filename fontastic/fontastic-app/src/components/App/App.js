@@ -1,9 +1,8 @@
-import Header from "../Header/Header.js";
-// import Artefact from "../Artefact/Artefact";
+// import Header from "../Header/Header.js";
 import ArtefactScreenOverview from "../ArtefactScreenOverview/ArtefactScreenOverview.js";
 // import artefactData from "../../artefactData.js";
-// import ArtefactScreen from "../ArtefactScreen/ArtefactScreen.js";
-// import styles from "./ArtefactScreen.module.css";
+import LoadingScreen from "../LoadingScreen/LoadingScreen.js";
+import VideoScreen from "../Video/VideoScreen.js";
 import About from "../AboutScreen/About.js";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
@@ -11,12 +10,14 @@ import "./App.css";
 function App() {
   return (
     <div className="bg-Container">
-      <Header />
+      {/* <Header /> */}
       <div className="app-Container">
         {" "}
         <Routes>
           <Route path="/" element={<ArtefactScreenOverview />} />
           <Route path="about" element={<About />} />{" "}
+          <Route path="loadingScreen" element={<LoadingScreen />} />
+          <Route path="video" element={<VideoScreen />} />
           {/* <ArtefactScreenOverview artefactData={artefactData} /> */}
           {/* <ArtefactScreen artefactData={artefactData} /> */}
         </Routes>

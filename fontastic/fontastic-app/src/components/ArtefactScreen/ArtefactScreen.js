@@ -35,9 +35,9 @@ export default function ArtefactScreen({ artefactData, closeHandler }) {
           <p>{artefactData.learningText1}</p>
           <p>{artefactData.learningText2}</p>
         </div>
-        <button onClick={AlertMsg}>
-          <circle>AR</circle>AR Funktion ausprobieren
-        </button>
+        <div className={styles.button} onClick={AlertMsg}>
+          <div className={styles.circle}>AR</div>AR Funktion ausprobieren
+        </div>
       </div>{" "}
     </div>
   );

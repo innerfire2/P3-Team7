@@ -14,13 +14,12 @@ function NavigationMenu(props) {
             </Link>
           </li>
           <li style={{ borderTop: "1px solid rgba(0, 0, 0, 0.15)" }}>
-            <Link to="/" onClick={props.closeMenu}>
-              {" "}
-              Video{" "}
+            <Link to="/Video" onClick={props.closeMenu}>
+              Video
             </Link>
           </li>
           <li style={{ borderTop: "1px solid rgba(0, 0, 0, 0.15)" }}>
-            <Link to="/" onClick={props.closeMenu}>
+            <Link to="/LoadingScreen" onClick={props.closeMenu}>
               {" "}
               Gallerie{" "}
             </Link>

@@ -98,20 +98,27 @@
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-button {
+.button {
   background-color: #afb5dc;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   width: 240px;
   border-radius: 25px;
   font-family: "Karla", sans-serif;
   font-size: 14px;
   font: weight 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 25px;
+  box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.2);
 }
-circle {
+.circle {
   background-color: #000000;
   border-radius: 25px;
-  padding: 10px;
+  width: 17px;
+  padding: 5px;
   margin-right: 10px;
   color: #ffffff;
 }
