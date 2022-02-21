@@ -85,43 +85,30 @@
       <a-nft
         markerhandler
         type="nft"
-        url=".\fontastic\AR\imageDescriptors\lebendigerGeist"
+        url=".\fontastic\AR\imageDescriptors\livingGhost"
         smooth="true"
-        smoothCount="10"
-        smoothTolerance=".01"
-        smoothThreshold="5"
+        smoothCount="50"
+        smoothTolerance="0.1"
+        smoothThreshold="500"
       >
-        <a-text
-          value="Parking"
-          color="red"
-          position="0 0 0"
-          scale="350 350 350"
-          side="double"
-        ></a-text>
-
         <a-plane
           color="white"
           rotation="-90 0 0"
-          position="0 -0.25 0"
-          width="3"
-          material="transparent: true; opacity: 0.90"
+          position="30 -0.5 10"
+          width="90"
+          height="15"
+          z-offset="0"
         ></a-plane>
 
-        <!-- for more properties, see https://github.com/aframevr/aframe/blob/master/docs/components/text.md -->
         <a-text
-          value="Hello, world!"
-          font="./fonts/Exo2Bold.fnt"
+          value="Parking"
           color="red"
           rotation="-90 0 0"
-          scale="2 2 2"
+          position="30 5 10"
+          scale="50 50 50"
+          side="double"
+          z-offset="3"
         ></a-text>
-
-        <!-- positioning a plane directly below text for increased visibility; need to adjust position to avoid z-fighting.  -->
-
-        <!-- positioning a second copy to attempt drop-shadow effect; need to adjust position to avoid z-fighting -->
-        <!-- <a-text value="Hello, world!" font="fonts/Exo2Bold.fnt" color="black" rotation="-90 0 0" align="center" scale="2 2 2" position="0.01 -0.2 0"></a-text> -->
-
-        <!-- avoiding z-fighting is difficult; may want to render canvas to text instead -->
       </a-nft>
 
       <a-entity camera></a-entity>
