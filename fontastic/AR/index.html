@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+  />
+
   <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+  <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.min.js"></script>
 
   <style>
     .arjs-loader {
@@ -59,6 +66,37 @@
     };
   </script>
 
+  <div
+    style="
+      width: 50%;
+      height: 0%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      overflow: hidden;
+    "
+  >
+    <div
+      id="planeHTML"
+      style="
+        background: linear-gradient(red, yellow, green);
+        width: 500px;
+        height: 200px;
+        font-size: 64px;
+        padding-top: 15px;
+        color: #222;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        border-radius: 200px;
+      "
+    >
+      <p>Dem lebendigen Geist</p>
+    </div>
+  </div>
+
   <body style="margin: 0px; overflow: hidden">
     <div class="arjs-loader">
       <div>Loading, please wait...</div>
@@ -85,33 +123,38 @@
       <a-nft
         markerhandler
         type="nft"
-        url=".\fontastic\AR\imageDescriptors\livingGhost"
+        url=".\fontastic\AR\imageDescriptors\lebendigerGeist"
         smooth="true"
-        smoothCount="50"
+        smoothCount="10"
         smoothTolerance="0.1"
-        smoothThreshold="500"
+        smoothThreshold="50"
       >
         <a-plane
-          color="white"
+          material="shader: html; target: #planeHTML; ratio: height; transparent: true; side: double"
+          position="0 2 -6"
           rotation="-90 0 0"
-          position="30 -0.5 10"
-          width="90"
-          height="15"
-          z-offset="0"
+          scale="20 20 20"
         ></a-plane>
 
-        <a-text
-          value="Parking"
-          color="red"
+        <!-- <a-plane
+          color="white"
           rotation="-90 0 0"
-          position="30 5 10"
-          scale="50 50 50"
-          side="double"
-          z-offset="3"
-        ></a-text>
+          position="18 -5 0"
+          width="55"
+          height="5"
+        ></a-plane> -->
+
+        <!-- <a-text
+          value="Dem Lebendigen Geist"
+          color="black"
+          font="fonts/Exo2Bold.fnt"
+          rotation="-90 0 0"
+          scale="20 20 20"
+          zOffset="3"
+        ></a-text> -->
       </a-nft>
 
-      <a-entity camera></a-entity>
+      <a-entity camera> </a-entity>
     </a-scene>
   </body>
 </html>
