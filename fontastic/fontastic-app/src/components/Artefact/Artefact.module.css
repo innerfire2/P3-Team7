@@ -61,17 +61,17 @@
 
 .bulbIcon {
   color: #99dcdb;
-  font-size: 30px;
+  font-size: 28px;
   margin-top: 9px;
   margin-bottom: 15px;
-  margin-left: 15px;
-  margin-right: 4px;
+  margin-left: 7px;
+  margin-right: 2px;
   float: left;
 }
 .BackArrow {
   float: right;
   margin-top: 14px;
-  margin-right: 8px;
+  margin-right: 10px;
 }
 
 .photo {

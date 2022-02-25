@@ -25,10 +25,11 @@ export default function Artefact({ artefactData }) {
         </div>
         <div className={styles.lowerContainer}>
           <IoBulb className={styles.bulbIcon} />
-          <IoChevronForwardOutline className={styles.BackArrow} size={25} />
+          {/* <IoChevronForwardOutline className={styles.BackArrow} size={25} /> */}
           <h3 className={styles.learning}>{artefactData.learning} </h3>
-          <span>mehr</span>
+          {/* <span>mehr</span> */}
         </div>
+        <IoChevronForwardOutline className={styles.BackArrow} size={25} />
       </div>
       {showProfile && (
         <ArtefactScreen
