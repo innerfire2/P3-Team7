@@ -8,7 +8,7 @@ function NavigationMenu(props) {
         <div className={styles.NavigationMenu}>
           <li>
             {" "}
-            <Link to="/" onClick={props.closeMenu}>
+            <Link to="/home" onClick={props.closeMenu}>
               {" "}
               Home{" "}
             </Link>

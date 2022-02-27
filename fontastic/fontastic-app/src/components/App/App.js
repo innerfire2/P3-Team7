@@ -2,25 +2,50 @@
 import ArtefactScreenOverview from "../ArtefactScreenOverview/ArtefactScreenOverview.js";
 // import artefactData from "../../artefactData.js";
 import LoadingScreen from "../LoadingScreen/LoadingScreen.js";
+// import ArScreen from "../Ar/ArScreen.js";
 import VideoScreen from "../Video/VideoScreen.js";
 import About from "../AboutScreen/About.js";
 import { Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
+import PulseLoader from "react-spinners/PulseLoader";
+import fontLogo from "./fontastic.png";
+
 import "./App.css";
+import IntroductionScreen from "../IntroScreen/IntroductionSreen.js";
 
 function App() {
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 6000);
+  }, []); //runs only one time when page is rendered
   return (
     <div className="bg-Container">
       {/* <Header /> */}
       <div className="app-Container">
-        {" "}
-        <Routes>
-          <Route path="/" element={<ArtefactScreenOverview />} />
-          <Route path="about" element={<About />} />{" "}
-          <Route path="loadingScreen" element={<LoadingScreen />} />
-          <Route path="video" element={<VideoScreen />} />
-          {/* <ArtefactScreenOverview artefactData={artefactData} /> */}
-          {/* <ArtefactScreen artefactData={artefactData} /> */}
-        </Routes>
+        {loading ? (
+          <div className="Loader">
+            <div className="Loader-Content">
+              <img className="photo" src={fontLogo} alt="" />
+              <PulseLoader size={10} color={"#dee8f0"} loading={loading} />
+            </div>
+          </div>
+        ) : (
+          <Routes>
+            <Route path="/" element={<IntroductionScreen />} />
+            <Route path="home" element={<ArtefactScreenOverview />} />
+            <Route path="about" element={<About />} />{" "}
+            <Route path="loadingScreen" element={<LoadingScreen />} />
+            {/* <Route path="loadingScreen" element={<ArScreen />} /> */}
+            <Route path="video" element={<VideoScreen />} />
+            {/* <Route path="video" element={<LoadingScreen />} /> */}
+            {/* <ArtefactScreenOverview artefactData={artefactData} /> */}
+            {/* <ArtefactScreen artefactData={artefactData} /> */}
+          </Routes>
+        )}
       </div>
     </div>
   );

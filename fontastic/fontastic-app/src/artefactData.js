@@ -62,7 +62,7 @@ const artefactData = [
     img: "Buecherverbrennung.png",
     textDescription:
       "Die Gedenktafel zur Bücherverbrennung aus dem Jahr 2011 erinnert an die Zerstörung von Schrift durch die Nazis von 1933. Die Verbrennungen von “undeutschen” Schriften politisch unliebsamer oder jüdischer Autoren, waren Teil der sogenannten “Aktion wider den deutschen Geist” und wurden hauptsächlich von Studenten organisiert. Die Bücherverbrennung in Heidelberg fand am Mittwoch, den 17. Mai auf dem Universitätsplatz statt.",
-    learning: "Metaebene?",
+    learning: "Metaebene",
     learningText1:
       "Das zielgerichtete Zerstören von Schriftträgern, Texten und Zeichen ist leider eine übliche und weit verbreitete Praxis. Die verbrannten Bücher gab es zum Glück noch zur Genüge in anderen Ländern. So betrifft dieser Informationsverlust vor allem die Zeit vor dem Buchdruck. Beispielsweise wurden im Zuge der sogenannten damnatio memoriae (Verbannung des Andenkens) zahlreiche römische Herrschernamen von Steininschriften entfernt. Und auch das Abschaben von Pergament, um es wiederverwenden zu können, war damals eine logische Praxis und stellt heutzutage Forscher*innen und Wissenschaftler*innen vor eine Herausforderung.",
     learningText2:

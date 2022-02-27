@@ -14,8 +14,8 @@ export default function VideoScreen() {
           </video>
         </main>
         <nav>
-          <Link to="/">Back to Home</Link>
-        </nav>
+          <Link to="/home">Back to Home</Link>
+        </nav>{" "}
       </div>
     </>
   );
