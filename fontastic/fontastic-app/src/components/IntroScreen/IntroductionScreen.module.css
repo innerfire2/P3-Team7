@@ -1,1 +1,33 @@
+.videoContainer {
+  margin-top: 160px;
+}
 
+.videoContainer2 {
+  margin-top: 0px;
+}
+.video {
+  position: fixed;
+  z-index: -1;
+  /* margin-top: 5px; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  background-color: rgb(127, 140, 255);
+  font-family: "Karla", sans-serif;
+  font-weight: 600px;
+  border-radius: 25px;
+  font-size: 20px;
+  margin: auto;
+  /* z-index: 10; */
+  margin-top: 340px;
+  width: 150px;
+  height: 60px;
+}
+
+.button > a {
+  color: white;
+}

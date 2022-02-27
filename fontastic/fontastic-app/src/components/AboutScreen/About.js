@@ -12,7 +12,7 @@ export default function About() {
           <p>Description of the team and the project</p>
         </main>
         <nav>
-          <Link to="/">Home</Link>
+          <Link to="/home">Home</Link>
         </nav>
       </div>
     </>

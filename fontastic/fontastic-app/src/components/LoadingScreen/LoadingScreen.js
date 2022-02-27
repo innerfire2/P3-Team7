@@ -9,7 +9,7 @@ export default function LoadingScreen() {
         <p>Explore, experiment and learn</p>
         <button className={styles.buttonStyle}>
           {" "}
-          <Link to="/">Start</Link>
+          <Link to="/home">Start</Link>
         </button>
       </div>
     </div>
