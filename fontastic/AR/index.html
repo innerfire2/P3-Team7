@@ -9,11 +9,6 @@
 
     <link rel="stylesheet" href="./stylesheet.css" />
 
-    <!-- Ar JS and Aframe -->
-    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-    <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.min.js"></script>
-
     <!-- React -->
     <script
       crossorigin
@@ -24,12 +19,17 @@
       src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
     ></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Ar JS and Aframe -->
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.min.js"></script>
   </head>
 
   <body style="margin: 0px; overflow: hidden">
     <div id="root"></div>
 
-    <script>
+    <!-- <script>
       window.onload = function () {
         document
           .querySelector(".screenOverlay")
@@ -49,13 +49,9 @@
             alert("Hi there!");
           });
       };
-    </script>
+    </script> -->
 
-    <script type="text/babel">
-      function AR() {}
-    </script>
-
-    <div class="arjs-loader">
+    <!-- <div class="arjs-loader">
       <div>Loading, please wait...</div>
     </div>
 
@@ -99,24 +95,26 @@
           scale="10 10 10"
         ></a-plane>
 
-        <!-- <a-plane
+         <a-plane
           color="white"
           rotation="-90 0 0"
           position="18 -5 0"
           width="55"
           height="5"
-        ></a-plane> -->
+        ></a-plane>
 
-        <!-- <a-text
+        <a-text
           value="Dem Lebendigen Geist"
           color="black"
           font="fonts/Exo2Bold.fnt"
           rotation="-90 0 0"
           scale="20 20 20"
           zOffset="3"
-        ></a-text> -->
+        ></a-text>
       </a-nft>
       <a-entity camera> </a-entity>
-    </a-scene>
+    </a-scene> -->
+
+    <script type="text/babel" src="AR.js"></script>
   </body>
 </html>
