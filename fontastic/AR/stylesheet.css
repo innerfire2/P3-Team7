@@ -58,6 +58,12 @@
   white-space: nowrap;
 
   font-size: 50px;
-  font-weight: 200px;
   color: black;
+}
+
+.screenOverlay {
+  position: fixed;
+  width: 200%;
+  height: 100%;
+  z-index: 8;
 }
