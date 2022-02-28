@@ -5,16 +5,17 @@
   top: 0;
 }
 .Navigation {
-  background-color: #3b2d60;
-  margin-bottom: -25px;
+  /* background-color: #3b2d60; */
+  margin-bottom: -65px;
   width: 100%;
   position: sticky;
 }
 .headerContainer {
-  background-color: #3b2d60;
+  /* background-color: #3b2d60; */
   padding: 0px;
   width: 100%;
   padding-bottom: 20px;
+  top: -20px;
   color: white;
   font-family: "Poppins", sans-serif;
 }

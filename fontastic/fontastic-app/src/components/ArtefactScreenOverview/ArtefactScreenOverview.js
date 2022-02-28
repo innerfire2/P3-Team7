@@ -6,7 +6,7 @@ import Header from "../Header/Header.js";
 export default function ArtefactScreenOverview() {
   return (
     <>
-      <Header />
+      <Header title="Übersicht" unterTitle="Heidelberger Artefakte" />
       <div className={styles.screen}>
         {/* <h1>Übersicht</h1> */}
         {artefactData.map((item) => (

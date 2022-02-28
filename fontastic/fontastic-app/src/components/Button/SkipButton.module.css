@@ -1,0 +1,16 @@
+.button {
+  background-color: rgb(127, 140, 255);
+  font-family: "Karla", sans-serif;
+  font-weight: 600px;
+  border-radius: 25px;
+  font-size: 18px;
+  margin: auto;
+  /* z-index: 10; */
+  margin-top: 75vh;
+  width: 120px;
+  height: 40px;
+}
+
+.button > a {
+  color: white;
+}

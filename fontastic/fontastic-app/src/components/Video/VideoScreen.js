@@ -6,7 +6,7 @@ import styles from "./VideoScreen.module.css";
 export default function VideoScreen() {
   return (
     <>
-      <Header />
+      <Header title="Video" />
       <div className={styles.videoContainer}>
         <main>
           <video autoPlay loop muted className={styles.video}>

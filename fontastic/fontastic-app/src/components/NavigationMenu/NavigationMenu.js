@@ -19,7 +19,7 @@ function NavigationMenu(props) {
             </Link>
           </li>
           <li style={{ borderTop: "1px solid rgba(0, 0, 0, 0.15)" }}>
-            <Link to="/LoadingScreen" onClick={props.closeMenu}>
+            <Link to="/ImageGallery" onClick={props.closeMenu}>
               {" "}
               Gallerie{" "}
             </Link>

@@ -1,4 +1,6 @@
 .screen {
+  /* opacity: 0;
+  transition: opacity 5s; */
   height: 100vh;
   width: 100vw;
   background-color: #3b2d60;

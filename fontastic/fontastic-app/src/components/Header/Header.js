@@ -1,7 +1,7 @@
 import styles from "./Header.module.css";
 import Navigation from "../Navigation/Navigation.js";
 
-function Header() {
+function Header({ title, unterTitle }) {
   return (
     <header className={styles.header}>
       <div className={styles.Navigation}>
@@ -9,8 +9,8 @@ function Header() {
       </div>
       <div className={styles.headerContainer}>
         <div className={styles.textContainer}>
-          <p>Header</p>
-          <span>Untertitel</span>
+          <p>{title}</p>
+          <span>{unterTitle}</span>
         </div>
       </div>
     </header>
