@@ -1,5 +1,5 @@
 import styles from "./ArMode.module.css";
-export default function ArModule() {
+export default function ArMode() {
   const colors = ["black", "blue", "red", "green"];
 
   var counter = 2;
