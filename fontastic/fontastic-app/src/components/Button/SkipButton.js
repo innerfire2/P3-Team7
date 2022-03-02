@@ -16,10 +16,7 @@ export default function SkipButton() {
       {showSkipButton && (
         <nav>
           <button className={styles.button}>
-            <a target="_blank" href={process.env.PUBLIC_URL + "arPage.html"}>
-              {" "}
-              terminos
-            </a>
+            <Link to="/LoadingScreen">Skip</Link>
           </button>{" "}
         </nav>
       )}
