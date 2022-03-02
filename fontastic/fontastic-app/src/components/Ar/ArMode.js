@@ -80,7 +80,7 @@ export default function ArMode() {
         <a-nft
           markerhandler
           type="nft"
-          url=".\fontastic\fontastic-app\public\imageDescriptors\lebendigerGeist"
+          url="./imageDescriptors/lebendigerGeist"
           smooth="true"
           smoothCount="10"
           smoothTolerance="0.1"
