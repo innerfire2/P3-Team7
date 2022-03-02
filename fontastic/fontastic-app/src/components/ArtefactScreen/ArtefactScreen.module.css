@@ -15,8 +15,8 @@
   position: relative;
   margin: 0 auto;
   text-align: center;
-  width: 336px;
-  height: 225px;
+  width: 330px;
+  height: 219px;
   margin-top: 30px;
   /* height: 260px; */
 }
@@ -78,7 +78,7 @@
 .BackArrow {
   color: white;
   margin-top: 25px;
-  margin-left: -325px;
+  margin-left: -305px;
 }
 .learningContainer > p {
   text-align: left;

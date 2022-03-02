@@ -6,7 +6,7 @@ import LoadingScreen from "../LoadingScreen/LoadingScreen.js";
 // import ArScreen from "../Ar/ArScreen.js";
 // import ImageGallery from "../ImageGallery/ImageGallery.js";
 import ArScreen from "../Ar/ArScreen.js";
-import ArMode from "../Ar/ArMode.js";
+// import ArMode from "../Ar/ArMode.js";
 import VideoScreen from "../Video/VideoScreen.js";
 import About from "../AboutScreen/About.js";
 import { Routes, Route } from "react-router-dom";
@@ -46,7 +46,7 @@ function App() {
             <Route exact path="ImageGallery" element={<ArScreen />} />
             <Route path="loadingScreen" element={<LoadingScreen />} />
             <Route path="video" element={<VideoScreen />} />
-            <Route path="arScreen" element={<ArScreen />} />
+            <Route path="ar" element={<ArScreen />} />
             {/* <Route path="video" element={<LoadingScreen />} /> */}
             {/* <ArtefactScreenOverview artefactData={artefactData} /> */}
             {/* <ArtefactScreen artefactData={artefactData} /> */}

@@ -3,7 +3,7 @@ import { IoMoveSharp } from "react-icons/io5";
 import { FaCamera } from "react-icons/fa";
 import { FaFont } from "react-icons/fa";
 import { IoMdColorFill } from "react-icons/io";
-// import { IoMdColorFill } from "react-icons/io";
+import { MdExitToApp } from "react-icons/md";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -42,6 +42,7 @@ export default function ArScreen() {
           <p>
             Hier findest du die <span>AR-Funktionen</span>
           </p>
+          <p>TIPPE!</p>
         </div>{" "}
         <div
           className={
@@ -53,6 +54,7 @@ export default function ArScreen() {
           <p>
             Halte hier gerne deine <span>Ergebnisse</span> fotografisch fest
           </p>
+          <p>TIPPE!</p>
         </div>
         <div
           className={
@@ -64,6 +66,7 @@ export default function ArScreen() {
           <p>
             Alles verstanden? Dann <span>let's go!</span>
           </p>
+          <p>TIPPE!</p>
         </div>
         <div
           className={
@@ -88,6 +91,7 @@ export default function ArScreen() {
           />
         </div>
         {/* style={{ color: "red" }} */}
+        <MdExitToApp size={35} />
         <Link style={{ color: "white" }} className={styles.link} to="/home">
           zurück
         </Link>

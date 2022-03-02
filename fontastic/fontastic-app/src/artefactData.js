@@ -31,7 +31,10 @@ const artefactData = [
     learning: "veränderliche Bedeutung",
     learningText1:
       "Die faschistische Machtergreifung in den Folgejahren führt jedoch im Jahr 1935 zu einer radikalen Änderung der Fassadengestaltung. Man ersetze die Athenaskulptur durch einen Reichsadler und widmete die Universität von dort an “Dem deutschen Geist”. Erst nach Kriegsende konnte die ursprüngliche Inschrift wiederhergestellt werden. Zusätzlich verpflichtete sich die Uni Heidelberg von dort an “dem lebendigen Geist der Wahrheit, Gerechtigkeit und Humanität zu dienen”.Im Rahmen des 625-jährigen Universitätsjubiläum wurde im Jahr 2009 zusätzlich eine Installation von übermenschlich großen Lettern erstellt, welche die Buchstaben des “lebendigen Geist” enthalten. Zunächst auf dem Uniplatz stationiert sind sie heutzutage im Neuenheimer Feld zu finden.",
-    learningText2: "",
+    learningText2:
+      "Am Beispiel der Fassade der Neuen Universität lässt sich feststellen, wie derselbe Schriftzug zu unterschiedlichen Zeiten von verschiedenen Menschengruppen aufgefasst und behandelt werden kann. Ursprünglich sollte der “lebendige Geist” ein Ideal der Wissenschaft und eine Annahme über die menschliche Natur ausdrücken. In der zweiten Phase wurde er als “undeutsch” empfunden und ersetzt und zuletzt drückt die Wiederherstellung der Inschrift vor allem eine Abgrenzung zur nationalsozialistischen Vergangenheit aus. Die jüngste Installation des Schriftzug wiederum wird von heutigen Studierenden als Repräsentation der Universität aufgefasst.",
+    learningText3:
+      "So zeigt sich hier, dass Texte und Schriftartefakte nicht nur eine einzige, unveränderliche Bedeutung haben, die man aus ihrem Wortlaut lesen kann. Ihre Bedeutung ergibt sich daraus, wie Menschen mit ihnen umgehen und welchen Sinn sie ihnen zuschreiben.",
     id: "Artefact3",
   },
   {
