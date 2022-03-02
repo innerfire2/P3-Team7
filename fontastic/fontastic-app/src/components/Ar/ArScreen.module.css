@@ -1,13 +1,15 @@
 .ArScreen {
+  position: fixed;
   background-color: rgba(0, 0, 0, 0.74);
   height: 100vh;
   width: 100%;
   padding-top: 30px;
   color: white;
+  /* overflow: scroll; */
 }
 ´ .content {
   background-color: rgb(127, 140, 255);
-  display: flex;
+  /* display: flex; */
   text-align: center;
 }
 /* .content > p {
@@ -15,13 +17,108 @@
 } */
 .iconContainer {
   /* color: white; */
+  color: #99dcdb;
+  position: fixed;
   font-size: 30px;
-  padding-right: 10px;
-  padding-left: 10px;
-  margin-top: 600px;
+  padding-right: 20%;
+  padding-left: 20%;
+  bottom: 10px;
 }
 
 .link {
   margin-top: 50px;
   font-size: 22px;
+}
+
+.iconPosition {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.iconFont {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.iconColor {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* .iconCamera {
+  margin-left: 10px;
+  margin-right: 10px;
+} */
+
+/* color: #99dcdb; */
+.iconContainer2 {
+  color: white;
+  /* font-size: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 0px; */
+  position: fixed;
+  font-size: 30px;
+  padding-right: 20%;
+  padding-left: 20%;
+  bottom: 10px;
+}
+.iconContainer3 {
+  /* color: #c8dc99; */
+  /* background-color: rgb(95, 143, 131); */
+  /* font-size: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 0px; */
+  /* color: #99dcdb; */
+  color: white;
+  position: fixed;
+  font-size: 30px;
+  padding-right: 20%;
+  padding-left: 20%;
+  bottom: 10px;
+}
+.visibleText {
+  color: white;
+  font-family: "Karla", sans-serif;
+  font-size: 22px;
+  /* position: fixed;
+  left: 15vw;
+  top: 60vh; */
+  width: 220px;
+  margin: auto;
+  margin-top: 35vh;
+  margin-bottom: 0px;
+  /*width: 250px;
+  height: 30px;
+  background-color: aquamarine; */
+}
+
+.hiddenText {
+  color: rgba(255, 255, 255, 0);
+  font-family: "Karla", sans-serif;
+  font-size: 22px;
+  position: fixed;
+  left: 5vw;
+  top: 60vh;
+}
+.visibleText > p {
+  color: white;
+  font-family: "Karla", sans-serif;
+  font-size: 22px;
+}
+.visibleText > p > span {
+  color: #ffdd9b;
+  font-family: "Karla", sans-serif;
+  font-size: 22px;
+}
+
+.activeIconCamera {
+  color: #99dcdb;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.inactiveIconCamera {
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
 }
