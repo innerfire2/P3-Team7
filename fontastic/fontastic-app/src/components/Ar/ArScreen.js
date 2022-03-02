@@ -1,8 +1,7 @@
 import styles from "./ArScreen.module.css";
-import { IoMoveSharp } from "react-icons/io5";
-import { FaCamera } from "react-icons/fa";
-import { FaFont } from "react-icons/fa";
-import { IoMdColorFill } from "react-icons/io";
+// import { IoMoveSharp } from "react-icons/io5";
+// import { FaCamera } from "react-icons/fa";
+// import { FaFont } from "react-icons/fa";
 // import { IoMdColorFill } from "react-icons/io";
 // import { IoMdColorFill } from "react-icons/io";
 import { useState } from "react";
@@ -92,11 +91,10 @@ export default function ArScreen() {
         <Link style={{ color: "white" }} className={styles.link} to="/home">
           zurück
         </Link>
-        {/* Link löschen und durch toggle auf die Artefakt Page zurückleiten */}
-      </div>
-    </div>
-  );
-}
+        {/* Link löschen und durch toggle auf die Artefakt Page zurückleiten */}<div/>
+// import { IoMdColorFill } from "react-icons/io";
+// import { Link } from "react-router-dom";
+
 
 //onClick bei den Icons in active State versetzen und dann über css einfärben
 // IoMoveSharp

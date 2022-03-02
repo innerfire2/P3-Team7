@@ -4,6 +4,8 @@ import ArtefactScreenOverview from "../ArtefactScreenOverview/ArtefactScreenOver
 import LoadingScreen from "../LoadingScreen/LoadingScreen.js";
 // import ImageGallery from "../ImageGallery/ImageGallery.js";
 // import ArScreen from "../Ar/ArScreen.js";
+// import ImageGallery from "../ImageGallery/ImageGallery.js";
+import ArScreen from "../Ar/ArScreen.js";
 import VideoScreen from "../Video/VideoScreen.js";
 import About from "../AboutScreen/About.js";
 import { Routes, Route } from "react-router-dom";
@@ -13,7 +15,7 @@ import fontLogo from "./fontastic.png";
 
 import "./App.css";
 import IntroductionScreen from "../IntroScreen/IntroductionSreen.js";
-import ArScreen from "../Ar/ArScreen.js";
+// import ArScreen from "../Ar/ArScreen.js";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -43,6 +45,7 @@ function App() {
             <Route exact path="ImageGallery" element={<ArScreen />} />
             <Route path="loadingScreen" element={<LoadingScreen />} />
             <Route path="video" element={<VideoScreen />} />
+            <Route path="ar" element={<ArScreen />} />
             {/* <Route path="video" element={<LoadingScreen />} /> */}
             {/* <ArtefactScreenOverview artefactData={artefactData} /> */}
             {/* <ArtefactScreen artefactData={artefactData} /> */}
