@@ -25,13 +25,14 @@
   font-size: 18px;
 }
 .textContainer {
-  padding: 0px;
+  padding: 6px;
 }
 
 .textContainer > p {
   text-align: center;
-  font-size: 25px;
+  font-size: 22px;
   margin-bottom: 10px;
+  font-weight: 600px;
 }
 .textContainer > span {
   color: #ffdd9b;

@@ -14,7 +14,7 @@ export default function ArtefactScreen({ artefactData, closeHandler }) {
         onClick={closeHandler}
         size={35}
       />
-      <h1>Artefakt</h1>
+      {/* <h1>Artefakt</h1> */}
       <div className={styles.imageContainer}>
         <img
           className={styles.photo}
@@ -30,7 +30,8 @@ export default function ArtefactScreen({ artefactData, closeHandler }) {
         </div>{" "}
         <div className={styles.learningContainer}>
           <h3 className={styles.learning}>
-            LEARNING <IoBulb className={styles.bulbIcon} />
+            <IoBulb className={styles.bulbIcon} />
+            LEARNING
           </h3>{" "}
           <p>{artefactData.learningText1}</p>
           <p>{artefactData.learningText2}</p>
