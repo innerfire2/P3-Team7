@@ -1,8 +1,0 @@
-{
-  "type": "module",
-  "dependencies": {
-    "faker": "^5.5.3",
-    "sqlite": "^4.0.23",
-    "uuid": "^8.3.2"
-  }
-}
