@@ -16,7 +16,10 @@ export default function SkipButton() {
       {showSkipButton && (
         <nav>
           <button className={styles.button}>
-            <Link to="/arMode">Skip</Link>
+            <a target="_blank" href={process.env.PUBLIC_URL + "arPage.html"}>
+              {" "}
+              terminos
+            </a>
           </button>{" "}
         </nav>
       )}

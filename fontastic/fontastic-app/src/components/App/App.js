@@ -47,7 +47,13 @@ function App() {
             <Route path="loadingScreen" element={<LoadingScreen />} />
             <Route path="video" element={<VideoScreen />} />
             <Route path="arScreen" element={<ArScreen />} />
-            <Route path="arMode" element={<ArMode />} />
+            <Route
+              exact
+              path="arMode"
+              render={() => {
+                window.location.href = "arPage.html";
+              }}
+            />
             {/* <Route path="video" element={<LoadingScreen />} /> */}
             {/* <ArtefactScreenOverview artefactData={artefactData} /> */}
             {/* <ArtefactScreen artefactData={artefactData} /> */}
