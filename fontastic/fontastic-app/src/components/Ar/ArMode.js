@@ -1,5 +1,5 @@
 import styles from "./ArMode.module.css";
-export default function ArScreen() {
+export default function ArModule() {
   const colors = ["black", "blue", "red", "green"];
 
   var counter = 2;
