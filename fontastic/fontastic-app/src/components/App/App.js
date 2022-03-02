@@ -1,7 +1,7 @@
 // import Header from "../Header/Header.js";
 import ArtefactScreenOverview from "../ArtefactScreenOverview/ArtefactScreenOverview.js";
 // import artefactData from "../../artefactData.js";
-// import LoadingScreen from "../LoadingScreen/LoadingScreen.js";
+import LoadingScreen from "../LoadingScreen/LoadingScreen.js";
 import ImageGallery from "../ImageGallery/ImageGallery.js";
 // import ArScreen from "../Ar/ArScreen.js";
 import VideoScreen from "../Video/VideoScreen.js";
@@ -40,7 +40,7 @@ function App() {
             <Route exact path="home" element={<ArtefactScreenOverview />} />
             <Route exact path="about" element={<About />} />{" "}
             <Route exact path="ImageGallery" element={<ImageGallery />} />
-            {/* <Route path="loadingScreen" element={<ArScreen />} /> */}
+            <Route path="loadingScreen" element={<LoadingScreen />} />
             <Route path="video" element={<VideoScreen />} />
             {/* <Route path="video" element={<LoadingScreen />} /> */}
             {/* <ArtefactScreenOverview artefactData={artefactData} /> */}
