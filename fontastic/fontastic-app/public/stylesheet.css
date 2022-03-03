@@ -1,5 +1,24 @@
-.hidden {
-  display: none !important;
+body {
+  height: 100% !important;
+  width: 100% !important;
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+}
+
+#arObject {
+  visibility: hidden;
+}
+
+.camera-active #arObject {
+  visibility: visible;
+}
+
+#arjs-video {
+  visibility: hidden;
+}
+
+.camera-active #arjs-video {
+  visibility: visible;
 }
 
 .arjs-loader {

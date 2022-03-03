@@ -67,28 +67,6 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
 
-    <script>
-      window.onload = function () {
-        document
-          .querySelector(".screenOverlay")
-          .addEventListener("click", function () {
-            // here you can change also a-scene or a-entity properties, like
-            // changing your 3D model source, size, position and so on
-            // or you can just open links, trigger actions...
-            alert("You clicked on the body!");
-          });
-
-        document
-          .querySelector(".say-hi-button")
-          .addEventListener("click", function () {
-            // here you can change also a-scene or a-entity properties, like
-            // changing your 3D model source, size, position and so on
-            // or you can just open links, trigger actions...
-            alert("Hi there!");
-          });
-      };
-    </script>
-
     <div
       id="arObject"
       class="hidden"
@@ -110,18 +88,11 @@
       </div>
 
       <a-scene
-        embedded
         vr-mode-ui="enabled: false;"
         renderer="logarithmicDepthBuffer: true;"
+        embedded
         arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
       >
-        <a-assets>
-          <a-asset-item
-            id="exoFont"
-            src="./fonts/exoBlack.typeface.json"
-          ></a-asset-item>
-        </a-assets>
-
         <a-nft
           markerhandler
           type="nft"
@@ -137,23 +108,6 @@
             rotation="-90 0 0"
             scale="10 10 10"
           ></a-plane>
-
-          <!-- <a-plane
-          color="white"
-          rotation="-90 0 0"
-          position="18 -5 0"
-          width="55"
-          height="5"
-        ></a-plane>
-
-        <a-text
-          value="Dem Lebendigen Geist"
-          color="black"
-          font="fonts/Exo2Bold.fnt"
-          rotation="-90 0 0"
-          scale="20 20 20"
-          zOffset="3"
-        ></a-text> -->
         </a-nft>
         <a-entity camera> </a-entity>
       </a-scene>
