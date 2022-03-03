@@ -1,3 +1,7 @@
+.hidden {
+  display: none !important;
+}
+
 .arjs-loader {
   height: 100%;
   width: 100%;
