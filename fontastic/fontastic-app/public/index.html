@@ -66,6 +66,12 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <div class="screenOverlay"></div>
+    <div class="textInput">
+      <div id="planeHTML" class="lebendigerGeist">
+        <h1>Dem lebendigen Geist</h1>
+      </div>
+    </div>
 
     <div
       id="arObject"
@@ -78,13 +84,6 @@
 
       <div class="buttons">
         <button class="say-hi-button">SAY HI!</button>
-      </div>
-
-      <div class="screenOverlay"></div>
-      <div class="textInput">
-        <div id="planeHTML" class="lebendigerGeist">
-          <h1>Dem lebendigen Geist</h1>
-        </div>
       </div>
 
       <a-scene
@@ -102,23 +101,6 @@
           smoothTolerance="0.1"
           smoothThreshold="50"
         >
-          <a-plane
-            color="white"
-            rotation="-90 0 0"
-            position="18 -5 0"
-            width="55"
-            height="5"
-          ></a-plane>
-
-          <a-text
-            value="Dem Lebendigen Geist"
-            color="black"
-            font="fonts/Exo2Bold.fnt"
-            rotation="-90 0 0"
-            scale="20 20 20"
-            zOffset="3"
-          ></a-text>
-
           <a-plane
             material="shader: html; target: #planeHTML; ratio: height;"
             position="20 5 -10"
