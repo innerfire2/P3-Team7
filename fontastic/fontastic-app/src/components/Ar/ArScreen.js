@@ -28,12 +28,18 @@ export default function ArScreen() {
     );
   };
   return (
-    <div className={styles.ArScreen} onClick={() => changeScreenContent()}>
+    <div
+      className={clickCount === 5 ? styles.containerArModeOn : styles.ArScreen}
+      onClick={() => changeScreenContent()}
+    >
       <div className={styles.content}>
-        <h1>AR Mode</h1>
+        <Link className={styles.link} to="/home">
+          <MdExitToApp size={35} />
+        </Link>{" "}
+        {/* <h1>AR Mode</h1>{" "} */}
         <div
           className={
-            isActive && clickCount === 3
+            isActive && clickCount === 2
               ? styles.visibleText
               : styles.hiddenText
           }
@@ -46,7 +52,7 @@ export default function ArScreen() {
         </div>{" "}
         <div
           className={
-            isActive && clickCount === 4
+            isActive && clickCount === 3
               ? styles.visibleText
               : styles.hiddenText
           }
@@ -58,7 +64,7 @@ export default function ArScreen() {
         </div>
         <div
           className={
-            isActive && clickCount === 5
+            isActive && clickCount === 4
               ? styles.visibleText
               : styles.hiddenText
           }
@@ -70,9 +76,9 @@ export default function ArScreen() {
         </div>
         <div
           className={
-            isActive && clickCount === 3
+            isActive && clickCount === 2
               ? styles.iconContainer
-              : isActive && clickCount === 4
+              : isActive && clickCount === 3
               ? styles.iconContainer3
               : styles.iconContainer2
           }
@@ -83,7 +89,7 @@ export default function ArScreen() {
           <FaCamera
             // style={{ fontSize: 30 }}
             className={
-              isActive && clickCount === 4
+              isActive && clickCount === 3
                 ? styles.activeIconCamera
                 : styles.inactiveIconCamera
             }
@@ -91,15 +97,16 @@ export default function ArScreen() {
           />
         </div>
         {/* style={{ color: "red" }} */}
-        <MdExitToApp size={35} />
-        <Link style={{ color: "white" }} className={styles.link} to="/home">
-          zurück
-        </Link>
+        {/* <Link style={{ color: "white" }} className={styles.link} to="/home">
+          <MdExitToApp size={35} />
+        </Link> */}
         {/* Link löschen und auf die Artefakt Page zurückleiten */}
       </div>
     </div>
   );
 }
+//BEMERKUNG
+// Nach dem fünften Klick auf den Screen erscheint der AR Mode, der background is farblos, die Funktionen (Icons)sind da, aber weiß
 
 // import { IoMdColorFill } from "react-icons/io";
 // import { Link } from "react-router-dom";
