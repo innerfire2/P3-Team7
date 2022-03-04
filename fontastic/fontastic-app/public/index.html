@@ -65,7 +65,12 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      var cameraEl = document.querySelector("#cam");
+      cameraEl.setAttribute("camera", "active", false);
+    </script>
 
+    <div class="screenOverlay"></div>
     <div class="textInput">
       <div id="planeHTML" class="lebendigerGeist">
         <h1 id="arText">Dem lebendigen Geist</h1>
@@ -77,8 +82,6 @@
       class="hidden"
       style="position: fixed; top: 0; left: 0; right: 0; bottom: 0"
     >
-      <div class="screenOverlay"></div>
-
       <div class="arjs-loader">
         <div>Loading, please wait...</div>
       </div>
@@ -109,7 +112,7 @@
             scale="10 10 10"
           ></a-plane>
         </a-nft>
-        <a-entity id="camera" camera="active: false"> </a-entity>
+        <a-entity id="cam" camera="active: false" camera> </a-entity>
       </a-scene>
     </div>
 

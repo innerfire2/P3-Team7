@@ -10,7 +10,7 @@ export default function ArMode() {
   function screenClicked() {
     alert("screenClicked");
 
-    document.querySelector("#arText").classList.add(`${styles.changeColor}`);
+    document.querySelector("#planeHTML").classList.add(`${styles.changeColor}`);
   }
 
   function buttonClicked() {
@@ -19,8 +19,6 @@ export default function ArMode() {
 
   useEffect(() => {
     document.body.classList.add("camera-active");
-
-    document.querySelector("#camera").setAttribute("camera", "active", true);
 
     document
       .querySelector(".screenOverlay")
