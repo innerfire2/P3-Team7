@@ -5,10 +5,10 @@ import { IoChevronBackOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 export default function ArtefactScreen({ artefactData, closeHandler }) {
-  function AlertMsg() {
-    //alert("Leads to AR-Mode");
-    <Link to="/LoadingScreen"></Link>;
-  }
+  // function AlertMsg() {
+  //alert("Leads to AR-Mode");
+  //   <Link to="/LoadingScreen"></Link>;
+  // }
   return (
     <div className={styles.screen}>
       <IoChevronBackOutline
@@ -38,8 +38,10 @@ export default function ArtefactScreen({ artefactData, closeHandler }) {
           <p>{artefactData.learningText1}</p>
           <p>{artefactData.learningText2}</p>
           <p>{artefactData.learningText3}</p>
+          <p>{artefactData.learningText4}</p>
         </div>
-        <div className={styles.button} onClick={AlertMsg}>
+        <div className={styles.button}>
+          {/* onClick={AlertMsg} */}
           <div className={styles.circle}>AR</div>
           <Link to="/ar">AR Funktion ausprobieren</Link>
         </div>

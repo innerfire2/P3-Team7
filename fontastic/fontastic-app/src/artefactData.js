@@ -19,8 +19,12 @@ const artefactData = [
     textDescription:
       'Die Heidelberger Universitätsbibliothek wurde aufgrund des anwachsenden Bücherbesitzes und den daraus folgenden Platzmangel am Ende des 19.Jahrhunderts um einen Neubau erweitert. Er gilt noch heute als markantes Gebäude in der Altstadt. Der ausführende Architekt Josef Durm verfolgte das Ziel die Besonderheit der Bibliothek als "Prachtportal zu den Schätzen der Wissenschaft" zu betonen. Aus diesem Grund ist die Fassade des Hauptportals der Universitätsbibliothek mit aufwändigen Relief-Verzierungen ausgestattet und entspricht damit wörtlich einem Prachtportal.',
     learning: "Kontextgebundenheit",
-    learningText1: "Kontextgebundenheit - Individuelle Wahrnehmung",
-    learningText2: "",
+    learningText1:
+      "Auch wenn der Gesamteindruck der Unibibliothek maßgeblich von den figürlichen Darstellungen und Verzierungen geprägt wird, trägt sie auch einige interessante Inschriften. So wird beispielsweise der Gründer der Universität Kurfürst Ruprecht I. sowohl bildlich als auch namentlich erwähnt. Auch dem Großherzog Karl Friedrich von Baden gebührt diese Ehre, da er die Universität im frühen 19. Jahrhundert aus einer Finanzkrise rettete.",
+    learningText2:
+      "Eine weitere Inschrift befindet sich auf der Westfassade. Oben unter dem Schmuckgiebel ist dort der lateinische Schriftzug “inter folia fructus” zu finden. Er bedeutet so viel wie “zwischen den Blättern die Frucht” und kann somit mit der Ostfassade in Verbindung gebracht werden. Der dortige Giebel zeigt nämlich den sogenannten “Weltgeist” mit einem “Lebensbaum” - für uns erkennbar als beblätterte Zweige mit goldenen Früchten. ",
+    learningText3:
+      "Zusätzlich kann die lateinische Inschrift doppelt gedeutet werden. Denn genau wie das deutsche Wort Blätter kann auch das lateinische Wort folia, sowohl die Blätter eines Baumes als auch die Papierseiten eines Buches bezeichnen. Somit verspricht die Inschrift, dass auch das Lesen von Büchern Früchte tragen kann und lädt letztendlich ein, die Bibliothek zu betreten.",
     id: "Artefact2",
   },
   {
@@ -42,9 +46,13 @@ const artefactData = [
     img: "Bodenmosaik-Heidelberg-Uni-Bibliothek.jpg",
     textDescription:
       "Der Eingangsbereich der Universitätsbibliothek ist geziert von goldlastigen Mosaiken und Inschriften, die prachtvoll die Wände (und Böden) schmücken. Der aufwändig geschmückte Durchgangsbereich irritiert, da sich hinter von Mosaik gerahmten Türen “nur” ein schlichtes Informationszentrum für Studenten befindet. Die Geschichte des Gebäudes macht jedoch erkenntlich wieso: Die Bücherbestände waren in der Konzeption des ausgehenden 19.Jahrhunderts nicht zur Selbstbedienung zugänglich. Nur Mitarbeiter hatten Zutritt zum hinteren Teil des Gebäudes, während die Studenten mit den angeforderten Büchern im prunkvollen Lesesaal arbeiteten. Später wurde in den 1980er Jahren im ursprünglichen Lesesaal ein Zwischenboden eingezogen, um nun auf zwei Etagen Serviceflächen anbieten zu können.",
-    learning: "Stichwort",
-    learningText1: "",
-    learningText2: "",
+    learning: "Präsenz",
+    learningText1:
+      "Anfang des 20. Jahrhundert genossen gebildete junge Leute eine humanistische Schulbildung, die selbstverständlich auch Altgriechisch beinhaltete. Die Mosaike wurden also in der Erwartung angebracht, dass sie auch gelesen und verstanden werden konnten. Heute gehört Griechisch längst nicht mehr zum verpflichtenden Lehrplan, sodass viele von uns die Buchstaben der Mosaike höchstwahrscheinlich als Griechisch erkennen, ihre Bedeutung jedoch nicht entziffern können. Damit können wir eine Erfahrung machen, die in der Vergangenheit für viele Menschen alltäglich war und heutzutage eher eine Seltenheit darstellt: die Wirkung von Geschriebenem wahrnehmen, ohne direkt seine Inhalt zu verstehen. Das Mosaik wirkt allein durch seine Präsenz und teilt uns optisch mit, dass im Raum dahinter etwas wichtiges geschieht. ",
+    learningText2:
+      "Diese Erfahrung kann man noch weiter zuspitzen, denn Schriftstücke haben auch dann eine Wirkung, wenn sie nicht einmal sinnlich wahrgenommen werden können. Ein Beispiel sind Medaillons. Sie müssen nicht jeden Tag geöffnet werden. Alleine die Präsenz eines Fotos oder Schriftstückes, dass sich in ihnen befindet, löst ihrem Träger eine Reaktion aus. Somit entfaltet alleine das Wissen um die Existenz eines Schriftartefakts eine eigene Wirkung auf die Menschen, die mit ihm umgehen. ",
+    learningText3:
+      "Das Verstehen oder Nichtverstehen eines Schriftzugs kann die Wahrnehmung beeinflussen. Gleichzeitig gilt es sich der Wirkung von Schrift als Symbole bewusst zu machen und erkennen zu können das Schrift immer eine Wirkung hat. ",
     id: "Artefact4",
   },
   {
@@ -72,6 +80,8 @@ const artefactData = [
       "Sie sind somit auf sogenannte Metatexte angewiesen. Sie werden als “Geschriebenes über Geschriebenes” verstanden. Im Beispiel der Bücherverbrennung 1933 umfassen sie Zeitungsartikel, Augenzeugenberichte, Flugblätter oder transkribierte Reden.So ist eine der Quellen ein Flugblatt der deutschen Studentenschaft, welches die sogenannten “Feuersprüche” umfasst. Sie wurden bei der Bücherverbrennung vorgetragen, um ihr einen Symbolcharakter zu verleihen und die Autoren der Bücher öffentlich zu verurteilen. Ein Beispiel dafür ist folgender Spruch:",
     learningText3:
       "Gegen Klassenkampf und Materialismus, für Volksgemeinschaft und idealistische Lebenshaltung! Ich übergebe der Flamme die Schriften von Marx und Kautsky.",
+    learningText4:
+      "Auch die Gedenktafel ist schließlich ein moderner Metatext. Doch auch sie ist in den Jahren seit ihrer Erstellung abgenutzt oder vielleicht sogar mutwillig beschädigt worden.",
     id: "Artefact6",
   },
   {
