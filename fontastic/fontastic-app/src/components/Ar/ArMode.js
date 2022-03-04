@@ -3,7 +3,7 @@ import styles from "./ArMode.module.css";
 import { useEffect } from "react";
 
 export default function ArMode() {
-  const colors = ["black", "blue", "red", "green"];
+  const colors = ["#2d335b", "#535b2d", "#494949", "#d7d7d7", "9ad4ce"];
 
   var counter = 2;
 
@@ -21,7 +21,7 @@ export default function ArMode() {
     document.body.classList.add("camera-active");
 
     document
-      .querySelector(".screenOverlay")
+      .querySelector("#screenOverlay")
       .addEventListener("click", screenClicked);
 
     document
@@ -30,7 +30,7 @@ export default function ArMode() {
 
     return () => {
       document
-        .querySelector(".screenOverlay")
+        .querySelector("#screenOverlay")
         .removeEventListener("click", screenClicked);
       document
         .querySelector(".say-hi-button")
