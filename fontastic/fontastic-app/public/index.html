@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
@@ -66,7 +65,7 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <div class="screenOverlay"></div>
+
     <div class="textInput">
       <div id="planeHTML" class="lebendigerGeist">
         <h1 id="arText">Dem lebendigen Geist</h1>
@@ -78,6 +77,8 @@
       class="hidden"
       style="position: fixed; top: 0; left: 0; right: 0; bottom: 0"
     >
+      <div class="screenOverlay"></div>
+
       <div class="arjs-loader">
         <div>Loading, please wait...</div>
       </div>
@@ -107,13 +108,11 @@
             rotation="-90 0 0"
             scale="10 10 10"
           ></a-plane>
-
         </a-nft>
-        <a-entity camera> </a-entity>
+        <a-entity id="camera" camera="active: false"> </a-entity>
       </a-scene>
     </div>
 
-    <script type="text/babel" src="AR.js"></script>
     <div id="root"></div>
   </body>
 </html>

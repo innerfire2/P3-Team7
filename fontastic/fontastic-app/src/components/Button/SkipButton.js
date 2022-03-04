@@ -16,7 +16,7 @@ export default function SkipButton() {
       {showSkipButton && (
         <nav>
           <button className={styles.button}>
-            <Link to="arMode">Skip</Link>
+            <Link to="/LoadingScreen">Skip</Link>
           </button>{" "}
         </nav>
       )}

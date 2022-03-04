@@ -3,6 +3,11 @@ body {
   width: 100% !important;
   margin-top: 0 !important;
   margin-left: 0 !important;
+  overflow: hidden;
+}
+
+#camera {
+  camera: "active: false";
 }
 
 #arObject {
@@ -69,7 +74,7 @@ body {
   left: 0;
   top: 0;
   z-index: -1;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .lebendigerGeist {

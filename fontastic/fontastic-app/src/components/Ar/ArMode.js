@@ -19,6 +19,9 @@ export default function ArMode() {
 
   useEffect(() => {
     document.body.classList.add("camera-active");
+
+    document.querySelector("#camera").setAttribute("camera", "active", true);
+
     document
       .querySelector(".screenOverlay")
       .addEventListener("click", screenClicked);
