@@ -3,14 +3,30 @@ import styles from "./ArMode.module.css";
 import { useEffect } from "react";
 
 export default function ArMode() {
-  const colors = ["#2d335b", "#535b2d", "#494949", "#d7d7d7", "9ad4ce"];
+  // const colors = [
+  //   `${styles.color1}`,
+  //   `${styles.color2}`,
+  //   `${styles.color3}`,
+  //   `${styles.color4}`,
+  //   `${styles.color5}`,
+  // ];
 
-  var counter = 2;
+  const colors = ["black", "green", "blue", "purple", "red"];
+
+  var counter = 0;
 
   function screenClicked() {
-    alert("screenClicked");
+    if (counter <= colors.length - 2) {
+      counter++;
+    } else {
+      counter = 0;
+    }
+    // document.querySelector("#planeHTML").classList.add(colors[counter]);
+    // document.querySelector("#planeHTML").classList.remove(colors[counter - 1]);
 
-    document.querySelector("#planeHTML").classList.add(`${styles.changeColor}`);
+    document
+      .querySelector("#planeHTML")
+      .setAttribute("style", `color: ${colors[counter]}`);
   }
 
   function buttonClicked() {
