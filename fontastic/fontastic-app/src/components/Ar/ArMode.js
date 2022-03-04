@@ -9,6 +9,8 @@ export default function ArMode() {
 
   function screenClicked() {
     alert("screenClicked");
+
+    document.querySelector("#arText").classList.add(`${styles.changeColor}`);
   }
 
   function buttonClicked() {
