@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 import styles from "./ArMode.module.css";
 
 import { useEffect } from "react";
@@ -27,6 +29,12 @@ export default function ArMode() {
     document
       .querySelector("#planeHTML")
       .setAttribute("style", `color: ${colors[counter]}`);
+
+    document.querySelector("#plane").setAttribute("material", "fps: 10");
+  }
+
+  function afterClick() {
+    document.querySelector("#plane").setAttribute("material", "fps: 0");
   }
 
   function buttonClicked() {
@@ -47,7 +55,8 @@ export default function ArMode() {
     return () => {
       document
         .querySelector("#screenOverlay")
-        .removeEventListener("click", screenClicked);
+        .removeEventListener("click", screenClicked, afterClick);
+
       document
         .querySelector(".say-hi-button")
         .removeEventListener("click", buttonClicked);
