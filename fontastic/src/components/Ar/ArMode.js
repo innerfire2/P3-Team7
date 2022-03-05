@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-
 import styles from "./ArMode.module.css";
 
 import { useEffect } from "react";
