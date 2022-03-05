@@ -31,9 +31,6 @@ export default function ArMode() {
       .setAttribute("style", `color: ${colors[counter]}`);
 
     document.querySelector("#plane").setAttribute("material", "fps: 10");
-  }
-
-  function afterClick() {
     document.querySelector("#plane").setAttribute("material", "fps: 0");
   }
 
@@ -55,7 +52,7 @@ export default function ArMode() {
     return () => {
       document
         .querySelector("#screenOverlay")
-        .removeEventListener("click", screenClicked, afterClick);
+        .removeEventListener("click", screenClicked);
 
       document
         .querySelector(".say-hi-button")
