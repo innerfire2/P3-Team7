@@ -4,6 +4,7 @@ import { FaCamera } from "react-icons/fa";
 import { FaFont } from "react-icons/fa";
 import { IoMdColorFill } from "react-icons/io";
 import { MdExitToApp } from "react-icons/md";
+import { IoIosShareAlt } from "react-icons/io";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -27,9 +28,30 @@ export default function ArScreen() {
       console.log("both functions together work")
     );
   };
+  // const [tippingInstruction, setTippingInstruction] = useState(false);
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     setTippingInstruction(true);
+  //   }, 2000);
+  // }, []);
+  // useEffect(() => {
+  //   const timerId = setInterval(() => {
+  //     setTippingInstruction(true);
+  //   }, 2000);
+
+  //   return () => clearInterval(timerId);
+  // }, []);
+
   return (
+    // if screen is clicked times enable AR mode and functions
     <div
-      className={clickCount === 5 ? styles.containerArModeOn : styles.ArScreen}
+      className={
+        clickCount === 5 && clickCount <= 5
+          ? styles.containerArModeOn
+          : clickCount < 5
+          ? styles.ArScreen
+          : styles.containerArModeOn
+      }
       onClick={() => changeScreenContent()}
     >
       <div className={styles.content}>
@@ -37,6 +59,12 @@ export default function ArScreen() {
           <MdExitToApp size={35} />
         </Link>{" "}
         {/* <h1>AR Mode</h1>{" "} */}
+        <div
+          className={clickCount === 0 ? styles.visibleText : styles.hiddenText}
+        >
+          <span>Wie funktioniert es?</span>
+          <p className={styles.fadeIn}>TIPPE!</p>
+        </div>{" "}
         <div
           className={
             isActive && clickCount === 2
@@ -48,7 +76,8 @@ export default function ArScreen() {
           <p>
             Hier findest du die <span>AR-Funktionen</span>
           </p>
-          <p>TIPPE!</p>
+          <p className={styles.fadeIn}>TIPPE!</p>
+          <IoIosShareAlt className={styles.arrowIcon} />
         </div>{" "}
         <div
           className={
@@ -60,7 +89,7 @@ export default function ArScreen() {
           <p>
             Halte hier gerne deine <span>Ergebnisse</span> fotografisch fest
           </p>
-          <p>TIPPE!</p>
+          <p className={styles.fadeIn}>TIPPE!</p>
         </div>
         <div
           className={
@@ -72,7 +101,7 @@ export default function ArScreen() {
           <p>
             Alles verstanden? Dann <span>let's go!</span>
           </p>
-          <p>TIPPE!</p>
+          <p className={styles.fadeIn}>TIPPE!</p>
         </div>
         <div
           className={

@@ -4,10 +4,17 @@ import { useState, useEffect } from "react";
 
 export default function SkipButton() {
   const [showSkipButton, setShowSkip] = useState(false);
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     setShowSkip(true);
+  //   }, 2000);
+  // }, []);
   useEffect(() => {
-    setInterval(() => {
+    const timerId = setInterval(() => {
       setShowSkip(true);
     }, 2000);
+
+    return () => clearInterval(timerId);
   }, []);
 
   return (
