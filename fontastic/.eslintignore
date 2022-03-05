@@ -1,6 +1,0 @@
-fontastic/*.js
-fontastic/*.html
-build/react_devtools_backend.js
-devtools://devtools/bundled/devtools_app.html?remoteBase=https://chrome-devtools-frontend.appspot.com/serve_file/@d537ec02474b5afe23684e7963d538896c63ac77/&can_dock=true&panel=elements&dockSide=undocked#:~:text=%40-,three.js%3A48264,-__draw
-https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/node_modules/super-three/build/three.js
-index.html
