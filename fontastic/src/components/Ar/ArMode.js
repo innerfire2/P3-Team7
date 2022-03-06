@@ -1,38 +1,58 @@
+/* eslint-disable no-console */
+
 import styles from "./ArMode.module.css";
 
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function ArMode() {
-  // const colors = [
-  //   `${styles.color1}`,
-  //   `${styles.color2}`,
-  //   `${styles.color3}`,
-  //   `${styles.color4}`,
-  //   `${styles.color5}`,
-  // ];
+  const [functionState, setFunctionState] = useState("size");
 
   const colors = ["black", "green", "blue", "purple", "red"];
+  const fonts = ["Times New Roman", "Verdana", "Helvetica", "Georgia"];
+  const sizes = ["10 10 10", "20 20 20", "30 30 30", "40 40 40", "50 50 50"];
 
-  var counter = 0;
+  var colorCounter = 0;
+  var fontCounter = 0;
+  var sizeCounter = 0;
 
   function screenClicked() {
-    if (counter <= colors.length - 2) {
-      counter++;
-    } else {
-      counter = 0;
-    }
-    // document.querySelector("#planeHTML").classList.add(colors[counter]);
-    // document.querySelector("#planeHTML").classList.remove(colors[counter - 1]);
-
-    document
-      .querySelector("#planeHTML")
-      .setAttribute("style", `color: ${colors[counter]}`);
-
     document.querySelector("#plane").setAttribute("material", "fps: 10");
-  }
 
-  function afterClick() {
-    document.querySelector("#plane").setAttribute("material", "fps: 0");
+    if (functionState === "color") {
+      if (colorCounter <= colors.length - 2) {
+        colorCounter++;
+      } else {
+        colorCounter = 0;
+      }
+
+      document
+        .querySelector("#planeHTML")
+        .setAttribute("style", `color: ${colors[colorCounter]}`);
+    }
+
+    if (functionState === "font") {
+      if (fontCounter <= fonts.length - 2) {
+        fontCounter++;
+      } else {
+        fontCounter = 0;
+      }
+
+      document
+        .querySelector("#planeHTML")
+        .setAttribute("style", `font-family: ${fonts[fontCounter]}`);
+    }
+
+    if (functionState === "size") {
+      if (sizeCounter <= sizes.length - 2) {
+        sizeCounter++;
+      } else {
+        sizeCounter = 0;
+      }
+
+      document
+        .querySelector("#planeHTML")
+        .setAttribute("style", `scale: ${sizes[sizeCounter]}`);
+    }
   }
 
   function buttonClicked() {
@@ -44,16 +64,18 @@ export default function ArMode() {
 
     document
       .querySelector("#screenOverlay")
-      .addEventListener("click", screenClicked, afterClick);
+      .addEventListener("click", screenClicked);
 
     document
       .querySelector(".say-hi-button")
       .addEventListener("click", buttonClicked);
 
     return () => {
+      document.querySelector("#plane").setAttribute("material", "fps: 0");
+
       document
         .querySelector("#screenOverlay")
-        .removeEventListener("click", screenClicked, afterClick);
+        .removeEventListener("click", screenClicked);
 
       document
         .querySelector(".say-hi-button")
