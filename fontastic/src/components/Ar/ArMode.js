@@ -5,7 +5,7 @@ import styles from "./ArMode.module.css";
 import { useState, useEffect } from "react";
 
 export default function ArMode() {
-  const [functionState, setFunctionState] = useState("size");
+  const [functionState, setFunctionState] = useState("content");
 
   const colors = ["black", "green", "blue", "purple", "red"];
   const fonts = ["Times New Roman", "Verdana", "Helvetica", "Georgia"];
@@ -52,6 +52,11 @@ export default function ArMode() {
       document
         .querySelector("#plane")
         .setAttribute("scale", `${sizes[sizeCounter]}`);
+    }
+
+    if (functionState === "content") {
+      document.querySelector("#arText").innerHTML =
+        "Vielleicht macht ja ein laengerer Text einen Unterschied";
     }
   }
 
