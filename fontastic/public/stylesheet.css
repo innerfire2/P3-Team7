@@ -85,6 +85,9 @@ body {
 }
 
 .lebendigerGeist {
+  width: 500px;
+  height: 200px;
+
   align-items: center;
   background-color: white;
   color: green;
