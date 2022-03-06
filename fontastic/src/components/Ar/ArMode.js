@@ -51,7 +51,7 @@ export default function ArMode() {
 
       document
         .querySelector("#planeHTML")
-        .setAttribute("style", `scale: ${sizes[sizeCounter]}`);
+        .setAttribute("scale", `${sizes[sizeCounter]}`);
     }
   }
 
