@@ -81,7 +81,7 @@ body {
   left: 0;
   top: 0;
   z-index: -1;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .lebendigerGeist {
@@ -106,4 +106,5 @@ body {
   height: 100%;
   overflow: hidden;
   background-color: transparent;
+  z-index: -1;
 }

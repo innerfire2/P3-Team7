@@ -12,6 +12,9 @@ import { Link } from "react-router-dom";
 export default function ArScreen() {
   const [isActive, setActive] = useState(false);
   const [clickCount, setClickCount] = useState(0);
+
+  const [functionState, setFunctionState] = useState("color");
+
   const clickScreen = () => {
     setClickCount(clickCount + 1);
     console.log(clickCount);
@@ -30,67 +33,72 @@ export default function ArScreen() {
     );
   };
 
+  console.log(functionState);
   return (
     // if screen is clicked times enable AR mode and functions
-    <div
-      className={
-        clickCount === 5 && clickCount <= 5
-          ? styles.containerArModeOn
-          : clickCount < 5
-          ? styles.ArScreen
-          : styles.containerArModeOn
-      }
-      onClick={() => changeScreenContent()}
-    >
-      <div className={styles.content}>
-        <Link className={styles.link} to="/home">
-          <MdExitToApp size={35} />
-        </Link>{" "}
-        <ArMode />
-        <div
-          className={clickCount === 0 ? styles.visibleText : styles.hiddenText}
-        >
-          <span>Wie funktioniert es?</span>
-          <p className={styles.fadeIn}>TIPPE!</p>
-        </div>{" "}
-        <div
-          className={
-            isActive && clickCount === 2
-              ? styles.visibleText
-              : styles.hiddenText
-          }
-        >
-          {/* <p>Bewege dein Handy, um das Artefakt zu erfassen</p> */}
-          <p>
-            Hier findest du die <span>AR-Funktionen</span>
-          </p>
-          <p className={styles.fadeIn}>TIPPE!</p>
-          <IoIosShareAlt className={styles.arrowIcon} />
-        </div>{" "}
-        <div
-          className={
-            isActive && clickCount === 3
-              ? styles.visibleText
-              : styles.hiddenText
-          }
-        >
-          <p>
-            Halte hier gerne deine <span>Ergebnisse</span> fotografisch fest
-          </p>
-          <p className={styles.fadeIn}>TIPPE!</p>
+    <div>
+      <Link className={styles.link} to="/home">
+        <MdExitToApp size={35} />
+      </Link>{" "}
+      <div
+        className={
+          clickCount === 5 && clickCount <= 5
+            ? styles.containerArModeOn
+            : clickCount < 5
+            ? styles.ArScreen
+            : styles.containerArModeOn
+        }
+        onClick={() => changeScreenContent()}
+      >
+        <div className={styles.content}>
+          <div
+            className={
+              clickCount === 0 ? styles.visibleText : styles.hiddenText
+            }
+          >
+            <span>Wie funktioniert es?</span>
+            <p className={styles.fadeIn}>TIPPE!</p>
+          </div>{" "}
+          <div
+            className={
+              isActive && clickCount === 2
+                ? styles.visibleText
+                : styles.hiddenText
+            }
+          >
+            {/* <p>Bewege dein Handy, um das Artefakt zu erfassen</p> */}
+            <p>
+              Hier findest du die <span>AR-Funktionen</span>
+            </p>
+            <p className={styles.fadeIn}>TIPPE!</p>
+            <IoIosShareAlt className={styles.arrowIcon} />
+          </div>{" "}
+          <div
+            className={
+              isActive && clickCount === 3
+                ? styles.visibleText
+                : styles.hiddenText
+            }
+          >
+            <p>
+              Halte hier gerne deine <span>Ergebnisse</span> fotografisch fest
+            </p>
+            <p className={styles.fadeIn}>TIPPE!</p>
+          </div>
+          <div
+            className={
+              isActive && clickCount === 4
+                ? styles.visibleText
+                : styles.hiddenText
+            }
+          >
+            <p>
+              Alles verstanden? Dann <span>let's go!</span>
+            </p>
+            <p className={styles.fadeIn}>TIPPE!</p>
+          </div>
         </div>
-        <div
-          className={
-            isActive && clickCount === 4
-              ? styles.visibleText
-              : styles.hiddenText
-          }
-        >
-          <p>
-            Alles verstanden? Dann <span>let's go!</span>
-          </p>
-          <p className={styles.fadeIn}>TIPPE!</p>
-        </div>
+
         <div
           className={
             isActive && clickCount === 2
@@ -100,9 +108,18 @@ export default function ArScreen() {
               : styles.iconContainer2
           }
         >
-          <IoMoveSharp className={styles.iconPosition} />
-          <FaFont className={styles.iconFont} />
-          <IoMdColorFill className={styles.iconColor} />
+          <IoMoveSharp
+            className={styles.iconPosition}
+            onClick={() => setFunctionState("size")}
+          />
+          <FaFont
+            className={styles.iconFont}
+            onClick={() => setFunctionState("font")}
+          />
+          <IoMdColorFill
+            className={styles.iconColor}
+            onClick={() => setFunctionState("color")}
+          />
           <FaCamera
             // style={{ fontSize: 30 }}
             className={
@@ -119,6 +136,7 @@ export default function ArScreen() {
         </Link> */}
         {/* Link löschen und auf die Artefakt Page zurückleiten */}
       </div>
+      <ArMode whichFunction={functionState} />
     </div>
   );
 }

@@ -1,15 +1,13 @@
 /* eslint-disable no-console */
 
-import styles from "./ArMode.module.css";
+import { useEffect } from "react";
 
-import { useState, useEffect } from "react";
-
-export default function ArMode() {
-  const [functionState, setFunctionState] = useState("content");
-
+export default function ArMode({ whichFunction }) {
   const colors = ["black", "green", "blue", "purple", "red"];
   const fonts = ["Times New Roman", "Verdana", "Helvetica", "Georgia"];
   const sizes = ["10 10 10", "20 20 20", "30 30 30", "40 40 40", "50 50 50"];
+
+  console.log(whichFunction);
 
   var colorCounter = 0;
   var fontCounter = 0;
@@ -18,7 +16,7 @@ export default function ArMode() {
   function screenClicked() {
     document.querySelector("#plane").setAttribute("material", "fps: 10");
 
-    if (functionState === "color") {
+    if (whichFunction === "color") {
       if (colorCounter <= colors.length - 2) {
         colorCounter++;
       } else {
@@ -30,7 +28,7 @@ export default function ArMode() {
         .setAttribute("style", `color: ${colors[colorCounter]}`);
     }
 
-    if (functionState === "font") {
+    if (whichFunction === "font") {
       if (fontCounter <= fonts.length - 2) {
         fontCounter++;
       } else {
@@ -42,7 +40,7 @@ export default function ArMode() {
         .setAttribute("style", `font-family: ${fonts[fontCounter]}`);
     }
 
-    if (functionState === "size") {
+    if (whichFunction === "size") {
       if (sizeCounter <= sizes.length - 2) {
         sizeCounter++;
       } else {
@@ -54,14 +52,14 @@ export default function ArMode() {
         .setAttribute("scale", `${sizes[sizeCounter]}`);
     }
 
-    if (functionState === "content") {
+    if (whichFunction === "content") {
       document.querySelector("#arText").innerHTML =
         "Vielleicht macht ja ein laengerer Text einen Unterschied";
     }
   }
 
   function buttonClicked() {
-    alert("Hi there!");
+    alert(whichFunction);
   }
 
   useEffect(() => {
