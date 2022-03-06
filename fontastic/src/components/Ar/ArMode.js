@@ -50,7 +50,7 @@ export default function ArMode() {
       }
 
       document
-        .querySelector("#planeHTML")
+        .querySelector("#plane")
         .setAttribute("scale", `${sizes[sizeCounter]}`);
     }
   }
