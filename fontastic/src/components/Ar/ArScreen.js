@@ -6,6 +6,7 @@ import { IoMdColorFill } from "react-icons/io";
 import { MdExitToApp } from "react-icons/md";
 import { IoIosShareAlt } from "react-icons/io";
 import { useState } from "react";
+import ArMode from "./ArMode";
 import { Link } from "react-router-dom";
 
 export default function ArScreen() {
@@ -28,19 +29,6 @@ export default function ArScreen() {
       console.log("both functions together work")
     );
   };
-  // const [tippingInstruction, setTippingInstruction] = useState(false);
-  // useEffect(() => {
-  //   setInterval(() => {
-  //     setTippingInstruction(true);
-  //   }, 2000);
-  // }, []);
-  // useEffect(() => {
-  //   const timerId = setInterval(() => {
-  //     setTippingInstruction(true);
-  //   }, 2000);
-
-  //   return () => clearInterval(timerId);
-  // }, []);
 
   return (
     // if screen is clicked times enable AR mode and functions
@@ -58,7 +46,7 @@ export default function ArScreen() {
         <Link className={styles.link} to="/home">
           <MdExitToApp size={35} />
         </Link>{" "}
-        {/* <h1>AR Mode</h1>{" "} */}
+        <ArMode />
         <div
           className={clickCount === 0 ? styles.visibleText : styles.hiddenText}
         >

@@ -1,10 +1,5 @@
-// import Header from "../Header/Header.js";
 import ArtefactScreenOverview from "../ArtefactScreenOverview/ArtefactScreenOverview.js";
-// import artefactData from "../../artefactData.js";
 import LoadingScreen from "../LoadingScreen/LoadingScreen.js";
-// import ImageGallery from "../ImageGallery/ImageGallery.js";
-// import ArScreen from "../Ar/ArScreen.js";
-// import ImageGallery from "../ImageGallery/ImageGallery.js";
 import ArScreen from "../Ar/ArScreen.js";
 import ArMode from "../Ar/ArMode.js";
 import VideoScreen from "../Video/VideoScreen.js";
@@ -16,18 +11,34 @@ import fontLogo from "./fontastic.png";
 
 import "./App.css";
 import IntroductionScreen from "../IntroScreen/IntroductionSreen.js";
-// import ArScreen from "../Ar/ArScreen.js";
 
 function App() {
-
-  (function() {
+  (function () {
     var method;
     var noop = function () {};
     var methods = [
-      'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-      'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-      'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-      'timeStamp', 'trace', 'warn'
+      "assert",
+      "clear",
+      "count",
+      "debug",
+      "dir",
+      "dirxml",
+      "error",
+      "exception",
+      "group",
+      "groupCollapsed",
+      "groupEnd",
+      "info",
+      "log",
+      "markTimeline",
+      "profile",
+      "profileEnd",
+      "table",
+      "time",
+      "timeEnd",
+      "timeStamp",
+      "trace",
+      "warn",
     ];
     var length = methods.length;
     var console = (window.console = window.console || {});
@@ -40,7 +51,7 @@ function App() {
         console[method] = noop;
       }
     }
-}());
+  })();
 
   const [loading, setLoading] = useState(false);
 
