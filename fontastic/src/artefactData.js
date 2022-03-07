@@ -1,4 +1,5 @@
 //prop "img" instead of "image" in our diagram bc it's shorter
+//using multiple learning props to style the text in paragraphs
 
 const artefactData = [
   {

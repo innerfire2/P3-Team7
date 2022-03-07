@@ -28,9 +28,12 @@
   /* color: white; */
   color: #99dcdb;
   position: fixed;
+  left: 10%;
+  right: 10%;
+  /* right: 10%; */
   font-size: 30px;
-  padding-right: 20%;
-  padding-left: 20%;
+  /* padding-right: 6%;
+  padding-left: 6%; */
   bottom: 10px;
 }
 
@@ -77,10 +80,13 @@
   padding-right: 10px;
   padding-left: 10px;
   margin-top: 0px; */
+
   position: fixed;
+  left: 10%;
+  right: 10%;
   font-size: 30px;
-  padding-right: 20%;
-  padding-left: 20%;
+  /* padding-right: 20%;
+  padding-left: 20%; */
   bottom: 10px;
 }
 .iconContainer3 {
@@ -93,9 +99,11 @@
   /* color: #99dcdb; */
   color: white;
   position: fixed;
+  left: 10%;
+  right: 10%;
   font-size: 30px;
-  padding-right: 20%;
-  padding-left: 20%;
+  /* padding-right: 20%;
+  padding-left: 20%; */
   bottom: 10px;
 }
 .visibleText {
@@ -153,41 +161,60 @@
 @media screen and (orientation: landscape) {
   .iconContainer {
     /* color: white; */
+    position: fixed;
+    top: 10%;
+    bottom: 10%;
     color: #99dcdb;
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
     gap: 1.5rem;
     font-size: 35px;
-    margin-bottom: 4rem;
-    right: 0;
+    /* margin-bottom: 4rem; */
+    /* right: 0; */
     margin-right: -8.5rem;
-    /* padding-right: 20%;
-    padding-left: 20%; */
+    padding-right: 0%;
+    padding-left: 0%;
+    left: 92%;
     /* bottom: 10px; */
   }
 
   .iconContainer2 {
     color: white;
+    position: fixed;
+    top: 10%;
+    bottom: 10%;
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
     gap: 1.5rem;
     font-size: 35px;
-    margin-bottom: 4rem;
+    /* margin-bottom: 4rem; */
     right: 0;
     margin-right: -8.5rem;
+
+    /* left: 0; */
+    padding-right: 0%;
+    padding-left: 0%;
+    left: 92%;
+    /* bottom: 10px; */
   }
   .iconContainer3 {
     color: white;
+    position: fixed;
+    top: 10%;
+    bottom: 10%;
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
     gap: 1.5rem;
     font-size: 35px;
-    margin-bottom: 4rem;
+    /* margin-bottom: 4rem; */
     right: 0;
     margin-right: -8.5rem;
+    padding-right: 0%;
+    padding-left: 0%;
+    left: 92%;
   }
 }
 
@@ -196,6 +223,13 @@
   color: #99dcdb;
   font-size: 70px;
   margin-top: 200px;
+}
+.arrowIconResults {
+  transform: rotate(90deg);
+  color: #99dcdb;
+  font-size: 70px;
+  margin-top: 200px;
+  margin-left: 170px;
 }
 /* Fade in Animation of tip instruction*/
 .fadeIn {

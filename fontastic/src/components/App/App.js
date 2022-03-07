@@ -54,17 +54,19 @@ function App() {
   })();
 
   const [loading, setLoading] = useState(false);
-
+  //runs only one time when page is rendered
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
     }, 6000);
-  }, []); //runs only one time when page is rendered
+  }, []);
   return (
+    //using ternary operator for conditions
     <div className="bg-Container">
       {/* <Header /> */}
       <div className="app-Container">
+        {/* check if loading is true show the Loading screen when opening the app */}
         {loading ? (
           <div className="Loader">
             <div className="Loader-Content">
@@ -73,6 +75,7 @@ function App() {
             </div>
           </div>
         ) : (
+          // if loading is false show all the other pages, starting with the Introduction Screen
           <Routes>
             <Route exact path="/" element={<IntroductionScreen />} />
             <Route exact path="home" element={<ArtefactScreenOverview />} />
@@ -98,4 +101,4 @@ export default App;
 //https://react-icons.github.io/react-icons/icons?name=io5
 // npm install react-icons --save
 // IMPORT
-// import { IconName } from "react-icons/io5";
+// import { IconName } from "react-icons/...;

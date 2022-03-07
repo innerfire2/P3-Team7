@@ -1,12 +1,14 @@
 import styles from "./Artefact.module.css";
 import { useState } from "react";
+import ArtefactScreen from "../ArtefactScreen/ArtefactScreen.js";
+//import the icons
 import { IoBulb } from "react-icons/io5";
 import { IoChevronForwardOutline } from "react-icons/io5";
-import ArtefactScreen from "../ArtefactScreen/ArtefactScreen.js";
 
 export default function Artefact({ artefactData }) {
   const [showProfile, setShowProfile] = useState(false);
 
+  //set the opposite of showProfile, true or false
   const toggleShowProfile = () => {
     setShowProfile(!showProfile);
   };
@@ -27,10 +29,10 @@ export default function Artefact({ artefactData }) {
           <IoBulb className={styles.bulbIcon} />
           {/* <IoChevronForwardOutline className={styles.BackArrow} size={25} /> */}
           <h3 className={styles.learning}>{artefactData.learning} </h3>
-          {/* <span>mehr</span> */}
         </div>
         <IoChevronForwardOutline className={styles.BackArrow} size={25} />
       </div>
+      {/* if showProfile is true then show the ArtefactScreen */}
       {showProfile && (
         <ArtefactScreen
           artefactData={artefactData}

@@ -1,4 +1,6 @@
 import styles from "./ArScreen.module.css";
+//import react icons
+import { MdFormatSize } from "react-icons/md"; //size function
 import { IoMoveSharp } from "react-icons/io5";
 import { FaCamera } from "react-icons/fa";
 import { FaFont } from "react-icons/fa";
@@ -10,18 +12,21 @@ import ArMode from "./ArMode";
 import { Link } from "react-router-dom";
 
 export default function ArScreen() {
+  //using useState to declare an "active"-variable which is used to check if the icon state is active or not
   const [isActive, setActive] = useState(false);
+  //using useState for a click count after which is decided when sth new renders
   const [clickCount, setClickCount] = useState(0);
+  //function for counting the clicks on the screen
   const clickScreen = () => {
     setClickCount(clickCount + 1);
     console.log(clickCount);
   };
-
+  //function for setting the icon state on active
   const toggleSwitchColors = () => {
     setActive(true);
     console.log("switch the colors");
   };
-
+  //function which makes it possible to pass two functions in onClick
   const changeScreenContent = () => {
     return (
       toggleSwitchColors(),
@@ -31,7 +36,9 @@ export default function ArScreen() {
   };
 
   return (
-    // if screen is clicked times enable AR mode and functions
+    // if screen is clicked 5 and times enable AR mode, show camera and functions
+    //if it's clicked less than 5 times show the regular ArScreen
+    // else show containerARModeOn, which means show the camera etc.
     <div
       className={
         clickCount === 5 && clickCount <= 5
@@ -47,6 +54,7 @@ export default function ArScreen() {
           <MdExitToApp size={35} />
         </Link>{" "}
         <ArMode />
+        {/* if screen is clicked x-times make the instructions visible, else hide the text */}
         <div
           className={clickCount === 0 ? styles.visibleText : styles.hiddenText}
         >
@@ -78,6 +86,7 @@ export default function ArScreen() {
             Halte hier gerne deine <span>Ergebnisse</span> fotografisch fest
           </p>
           <p className={styles.fadeIn}>TIPPE!</p>
+          <IoIosShareAlt className={styles.arrowIconResults} />
         </div>
         <div
           className={
@@ -91,6 +100,7 @@ export default function ArScreen() {
           </p>
           <p className={styles.fadeIn}>TIPPE!</p>
         </div>
+        {/* show colored icons depending on icon state and clickCount  */}
         <div
           className={
             isActive && clickCount === 2
@@ -103,21 +113,15 @@ export default function ArScreen() {
           <IoMoveSharp className={styles.iconPosition} />
           <FaFont className={styles.iconFont} />
           <IoMdColorFill className={styles.iconColor} />
+          <MdFormatSize className={styles.iconColor} />
           <FaCamera
-            // style={{ fontSize: 30 }}
             className={
               isActive && clickCount === 3
                 ? styles.activeIconCamera
                 : styles.inactiveIconCamera
             }
-            // className={styles.iconCamera}
           />
         </div>
-        {/* style={{ color: "red" }} */}
-        {/* <Link style={{ color: "white" }} className={styles.link} to="/home">
-          <MdExitToApp size={35} />
-        </Link> */}
-        {/* Link löschen und auf die Artefakt Page zurückleiten */}
       </div>
     </div>
   );
