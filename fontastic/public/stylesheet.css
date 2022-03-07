@@ -84,7 +84,7 @@ body {
   overflow: hidden;
 }
 
-.lebendigerGeist {
+#planeHTML {
   height: 500px;
   width: 2500px;
 
@@ -97,4 +97,13 @@ body {
 
   white-space: nowrap;
   font-size: 100px;
+}
+
+#arTextInput {
+  position: fixed;
+  width: 200%;
+  height: 100%;
+  overflow: hidden;
+  background-color: transparent;
+  z-index: -1;
 }

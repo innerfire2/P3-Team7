@@ -16,6 +16,10 @@ export default function ArMode({ whichFunction }) {
   function screenClicked() {
     document.querySelector("#plane").setAttribute("material", "fps: 10");
 
+    const arElement = document.querySelector("#planeHTML");
+
+    //arElement.style.fontFamily(`${fonts[fontCounter]}`);
+
     if (whichFunction === "color") {
       if (colorCounter <= colors.length - 2) {
         colorCounter++;
@@ -23,9 +27,13 @@ export default function ArMode({ whichFunction }) {
         colorCounter = 0;
       }
 
+      // document
+      //   .querySelector("#planeHTML")
+      //   .style.color(`${colors[colorCounter]}`);
+
       document
         .querySelector("#planeHTML")
-        .setAttribute("style", `font-family: ${fonts[fontCounter]}`);
+        .setAttribute("style", `color: ${colors[colorCounter]}`);
     }
 
     if (whichFunction === "font") {
@@ -55,6 +63,13 @@ export default function ArMode({ whichFunction }) {
     if (whichFunction === "content") {
       document.querySelector("#arText").innerHTML =
         "Vielleicht macht ja ein laengerer Text einen Unterschied";
+    }
+
+    if (whichFunction === "camera") {
+      //document.querySelector('a-scene').components.screenshot.getCanvas('perspective');
+      document
+        .querySelector("a-scene")
+        .components.screenshot.capture("perspective");
     }
   }
 
