@@ -3,27 +3,20 @@
   background-color: rgba(0, 0, 0, 0.74);
   height: 100vh;
   width: 100%;
-  /* padding-top: 30px; */
   color: white;
   /* overflow: scroll; */
 }
+
 ´ .content {
   background-color: rgb(127, 140, 255);
   /* display: flex; */
   text-align: center;
 }
+
 /* .content > h1 {
   font-size: 15px;
 } */
-.content > a {
-  /* color: white; */
-  color: #99dcdb;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-left: 15px;
-  margin-top: 12px;
-}
+
 .iconContainer {
   /* color: white; */
   color: #99dcdb;
@@ -40,6 +33,11 @@
 .link {
   margin-top: 50px;
   font-size: 22px;
+  color: #99dcdb;
+  position: fixed;
+  top: -35px;
+  left: 0;
+  padding-left: 15px;
 }
 
 /* After 5th click show the Ar Screen */
@@ -48,6 +46,7 @@
   /* background-color: rgba(0, 0, 0, 0); */
   height: 100vh;
   width: 100%;
+  z-index: -1;
   /* padding-top: 30px; */
 
   /* overflow: scroll; */
@@ -124,6 +123,7 @@
 
 .hiddenText {
   display: none;
+  z-index: -1;
   /* color: rgba(255, 255, 255, 0);
   font-family: "Karla", sans-serif;
   font-size: 22px;
@@ -177,6 +177,7 @@
     padding-left: 0%;
     left: 92%;
     /* bottom: 10px; */
+    z-index: 30;
   }
 
   .iconContainer2 {
