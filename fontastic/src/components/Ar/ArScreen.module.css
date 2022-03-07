@@ -54,6 +54,7 @@
 /* .containerArModeOn > a {
   color: rgb(43, 46, 255);
 } */
+
 .iconPosition {
   margin-left: 10px;
   margin-right: 10px;
@@ -150,12 +151,14 @@
   color: #99dcdb;
   margin-left: 10px;
   margin-right: 10px;
+  z-index: 30;
 }
 
 .inactiveIconCamera {
   color: white;
   margin-left: 10px;
   margin-right: 10px;
+  z-index: 30;
 }
 
 @media screen and (orientation: landscape) {
@@ -199,6 +202,7 @@
     padding-left: 0%;
     left: 92%;
     /* bottom: 10px; */
+    z-index: 30;
   }
   .iconContainer3 {
     color: white;
@@ -216,6 +220,7 @@
     padding-right: 0%;
     padding-left: 0%;
     left: 92%;
+    z-index: 30;
   }
 }
 
@@ -239,6 +244,10 @@
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 0.6s;
+}
+
+.active {
+  color: #99dcdb;
 }
 
 @keyframes fadeInOpacity {

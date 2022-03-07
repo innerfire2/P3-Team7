@@ -30,7 +30,7 @@ body {
 }
 
 .camera-active #screenOverlay {
-  z-index: 8;
+  z-index: 1;
 }
 
 .arjs-loader {
@@ -92,19 +92,9 @@ body {
 
   align-items: center;
   background-color: white;
-  color: green;
   display: inline flex;
   position: relative;
 
   white-space: nowrap;
   font-size: 100px;
-}
-
-#arTextInput {
-  position: fixed;
-  width: 200%;
-  height: 100%;
-  overflow: hidden;
-  background-color: transparent;
-  z-index: -1;
 }

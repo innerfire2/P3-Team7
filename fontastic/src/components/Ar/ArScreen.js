@@ -17,7 +17,7 @@ export default function ArScreen() {
   //using useState for a click count after which is decided when sth new renders
   const [clickCount, setClickCount] = useState(0);
 
-  const [functionState, setFunctionState] = useState("color");
+  const [functionState, setFunctionState] = useState("");
 
   const clickScreen = () => {
     setClickCount(clickCount + 1);
@@ -106,38 +106,49 @@ export default function ArScreen() {
           </div>
         </div>
         {/* show colored icons depending on icon state and clickCount  */}
+      </div>
+      <div
+        className={
+          isActive && clickCount === 2
+            ? styles.iconContainer
+            : isActive && clickCount === 3
+            ? styles.iconContainer3
+            : styles.iconContainer2
+        }
+      >
+        <IoMoveSharp
+          className={`${styles.iconPosition} ${
+            functionState === "position" && styles.active
+          }`}
+          onClick={() => setFunctionState("position")}
+        />
+        <FaFont
+          className={`${styles.iconFont} ${
+            functionState === "font" && styles.active
+          }`}
+          onClick={() => setFunctionState("font")}
+        />
+        <IoMdColorFill
+          className={`${styles.iconColor} ${
+            functionState === "color" && styles.active
+          }`}
+          onClick={() => setFunctionState("color")}
+        />
+        <MdFormatSize
+          className={`${styles.iconColor} ${
+            functionState === "size" && styles.active
+          }`}
+          onClick={() => setFunctionState("size")}
+        />
 
-        <div
+        <FaCamera
           className={
-            isActive && clickCount === 2
-              ? styles.iconContainer
-              : isActive && clickCount === 3
-              ? styles.iconContainer3
-              : styles.iconContainer2
+            (isActive && clickCount === 3) || functionState === "camera"
+              ? styles.activeIconCamera
+              : styles.inactiveIconCamera
           }
-        >
-          <IoMoveSharp
-            className={styles.iconPosition}
-            onClick={() => setFunctionState("size")}
-          />
-          <FaFont
-            className={styles.iconFont}
-            onClick={() => setFunctionState("font")}
-          />
-          <IoMdColorFill
-            className={styles.iconColor}
-            onClick={() => setFunctionState("color")}
-          />
-          <MdFormatSize className={styles.iconColor} />
-
-          <FaCamera
-            className={
-              isActive && clickCount === 3
-                ? styles.activeIconCamera
-                : styles.inactiveIconCamera
-            }
-          />
-        </div>
+          onClick={() => setFunctionState("camera")}
+        />
       </div>
       <ArMode whichFunction={functionState} />
     </div>

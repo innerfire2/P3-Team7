@@ -25,7 +25,7 @@ export default function ArMode({ whichFunction }) {
 
       document
         .querySelector("#planeHTML")
-        .setAttribute("style", `color: ${colors[colorCounter]}`);
+        .setAttribute("style", `font-family: ${fonts[fontCounter]}`);
     }
 
     if (whichFunction === "font") {
@@ -74,8 +74,6 @@ export default function ArMode({ whichFunction }) {
       .addEventListener("click", buttonClicked);
 
     return () => {
-      document.querySelector("#plane").setAttribute("material", "fps: 0");
-
       document
         .querySelector("#screenOverlay")
         .removeEventListener("click", screenClicked);
