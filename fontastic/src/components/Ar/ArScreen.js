@@ -39,7 +39,9 @@ export default function ArScreen() {
 
   console.log(functionState);
   return (
-    // if screen is clicked times enable AR mode and functions
+    // if screen is clicked 5 and times enable AR mode, show camera and functions
+    //if it's clicked less than 5 times show the regular ArScreen
+    // else show containerARModeOn, which means show the camera etc.
     <div>
       <Link className={styles.link} to="/home">
         <MdExitToApp size={35} />
@@ -54,6 +56,7 @@ export default function ArScreen() {
         }
         onClick={() => changeScreenContent()}
       >
+        {/* if screen is clicked x-times make the instructions visible, else hide the text */}
         <div className={styles.content}>
           <div
             className={
@@ -102,6 +105,7 @@ export default function ArScreen() {
             <p className={styles.fadeIn}>TIPPE!</p>
           </div>
         </div>
+        {/* show colored icons depending on icon state and clickCount  */}
 
         <div
           className={
@@ -124,6 +128,8 @@ export default function ArScreen() {
             className={styles.iconColor}
             onClick={() => setFunctionState("color")}
           />
+          <MdFormatSize className={styles.iconColor} />
+
           <FaCamera
             className={
               isActive && clickCount === 3
