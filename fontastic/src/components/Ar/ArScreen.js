@@ -28,6 +28,7 @@ export default function ArScreen() {
     setActive(true);
     console.log("switch the colors");
   };
+
   //function which makes it possible to pass two functions in onClick
   const changeScreenContent = () => {
     return (
