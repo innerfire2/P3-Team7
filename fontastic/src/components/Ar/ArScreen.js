@@ -5,6 +5,7 @@ import { IoMoveSharp } from "react-icons/io5";
 import { FaCamera } from "react-icons/fa";
 import { FaFont } from "react-icons/fa";
 import { IoMdColorFill } from "react-icons/io";
+import { RiTranslate2 } from "react-icons/ri"; //translate into other languages icon
 import { MdExitToApp } from "react-icons/md";
 import { IoIosShareAlt } from "react-icons/io";
 import { useState } from "react";
@@ -136,10 +137,17 @@ export default function ArScreen() {
           onClick={() => setFunctionState("color")}
         />
         <MdFormatSize
-          className={`${styles.iconColor} ${
+          className={`${styles.iconSize} ${
             functionState === "size" && styles.active
           }`}
           onClick={() => setFunctionState("size")}
+        />
+
+        <RiTranslate2
+          className={`${styles.iconTranslate}${
+            functionState === "translate" && styles.active
+          }`}
+          // onClick={() => setFunctionState("translate")}
         />
 
         <FaCamera
