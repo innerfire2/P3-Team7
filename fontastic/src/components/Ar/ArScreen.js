@@ -5,7 +5,8 @@ import { IoMoveSharp } from "react-icons/io5";
 import { FaCamera } from "react-icons/fa";
 import { FaFont } from "react-icons/fa";
 import { IoMdColorFill } from "react-icons/io";
-import { RiTranslate2 } from "react-icons/ri"; //translate into other languages icon
+// import { RiTranslate2 } from "react-icons/ri"; //translate into other languages icon
+import { IoLanguage } from "react-icons/io5";
 import { MdExitToApp } from "react-icons/md";
 import { IoIosShareAlt } from "react-icons/io";
 import { useState } from "react";
@@ -117,7 +118,7 @@ export default function ArScreen({ artefactData }) {
           >
             <div className={styles.taskBox}>
               <span>Denkanstoß</span>
-              <p> {artefactData[0].taskInspo} </p>
+              <p> {artefactData[2].taskInspo} </p>
               <p>Probier dich aus! </p>
             </div>
             {/* {artefactData.map(function (artefactData) {
@@ -165,7 +166,7 @@ export default function ArScreen({ artefactData }) {
           onClick={() => setFunctionState("size")}
         />
 
-        <RiTranslate2
+        <IoLanguage
           className={`${styles.iconTranslate}${
             functionState === "language" && styles.active
           }`}

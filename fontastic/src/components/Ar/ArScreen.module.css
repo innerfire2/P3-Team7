@@ -77,11 +77,6 @@
   margin-right: 10px;
 }
 
-/* .iconCamera {
-  margin-left: 10px;
-  margin-right: 10px;
-} */
-
 /* color: #99dcdb; */
 .iconContainer2 {
   color: white;
@@ -183,7 +178,7 @@
     grid-template-columns: 1fr;
     justify-content: center;
     gap: 1.5rem;
-    font-size: 35px;
+    font-size: 30px;
     /* margin-bottom: 4rem; */
     /* right: 0; */
     margin-right: -8.5rem;
@@ -203,7 +198,7 @@
     grid-template-columns: 1fr;
     justify-content: center;
     gap: 1.5rem;
-    font-size: 35px;
+    font-size: 30px;
     /* margin-bottom: 4rem; */
     right: 0;
     margin-right: -8.5rem;
@@ -225,7 +220,7 @@
     grid-template-columns: 1fr;
     justify-content: center;
     gap: 1.5rem;
-    font-size: 35px;
+    font-size: 30px;
     /* margin-bottom: 4rem; */
     right: 0;
     margin-right: -8.5rem;
@@ -251,8 +246,9 @@
     z-index: 30;
   }
   .iconTranslate {
-    position: fixed;
-    right: 20px;
+    color: red;
+    /* position: fixed;
+    right: 20px; */
   }
 }
 

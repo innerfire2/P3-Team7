@@ -9,7 +9,6 @@ export default function About() {
       <div className={styles.aboutContainer}>
         <main>
           <h2>Who are we?</h2>
-          <p>Description of the team and the project</p>
           <h3>Team</h3>
           <p>
             Wir sind Isabel, Katharina und Lara und studieren an der Hochschule
@@ -19,6 +18,10 @@ export default function About() {
             Sonderforschungsbereich Materiale Textkulturen.{" "}
           </p>
           <h3>Projekt</h3>
+          <p>
+            Der Leitgedanke, der hinter unserem Projekt stand, war es die
+            Wahrnehmung von Schrift neu zu erlernen.
+          </p>
         </main>
         <nav>
           <Link to="/home">Home</Link>
