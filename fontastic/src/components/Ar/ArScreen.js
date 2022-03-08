@@ -70,7 +70,7 @@ export default function ArScreen() {
           </div>{" "}
           <div
             className={
-              isActive && clickCount === 2
+              isActive && clickCount === 1
                 ? styles.visibleText
                 : styles.hiddenText
             }
@@ -84,7 +84,7 @@ export default function ArScreen() {
           </div>{" "}
           <div
             className={
-              isActive && clickCount === 3
+              isActive && clickCount === 2
                 ? styles.visibleText
                 : styles.hiddenText
             }
@@ -96,7 +96,7 @@ export default function ArScreen() {
           </div>
           <div
             className={
-              isActive && clickCount === 4
+              isActive && clickCount === 3
                 ? styles.visibleText
                 : styles.hiddenText
             }
@@ -104,6 +104,22 @@ export default function ArScreen() {
             <p>
               Alles verstanden? Dann <span>let's go!</span>
             </p>
+
+            <p className={styles.fadeIn}>TIPPE!</p>
+          </div>
+          <div
+            className={
+              isActive && clickCount === 4
+                ? styles.visibleText
+                : styles.hiddenText
+            }
+          >
+            <div className={styles.taskBox}>
+              <span>Denkanstoß</span>
+              <p>Verleihe dem Schriftstück deine persönliche Note. </p>
+              <p>Probier dich aus! </p>
+            </div>
+
             <p className={styles.fadeIn}>TIPPE!</p>
           </div>
         </div>
@@ -111,9 +127,9 @@ export default function ArScreen() {
       </div>
       <div
         className={
-          isActive && clickCount === 2
+          isActive && clickCount === 1
             ? styles.iconContainer
-            : isActive && clickCount === 3
+            : isActive && clickCount === 2
             ? styles.iconContainer3
             : styles.iconContainer2
         }
@@ -152,7 +168,7 @@ export default function ArScreen() {
 
         <FaCamera
           className={
-            (isActive && clickCount === 3) || functionState === "camera"
+            (isActive && clickCount === 2) || functionState === "camera"
               ? styles.activeIconCamera
               : styles.inactiveIconCamera
           }
