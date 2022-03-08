@@ -21,7 +21,9 @@ export default function Artefact({ artefactData }) {
         <div className={styles.imageContainer}>
           <img
             className={styles.photo}
-            src={`./assets/${artefactData.img}`}
+            // src={`./assets/${artefactData.url}`}
+            // src="https://stadtspaziergang.materiale-textkulturen.de/bilder/titelbilder_400/0005_Neue_Uni.png"
+            src={artefactData.url}
             alt=""
           />
         </div>

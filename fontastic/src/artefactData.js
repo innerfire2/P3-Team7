@@ -5,6 +5,7 @@ const artefactData = [
   {
     title: "Peterskirche: Grabplatte Olympia Morata",
     img: "Olympia-Morata.png",
+    url: "https://stadtspaziergang.materiale-textkulturen.de/bilder/titelbilder_400/0001_Olimpia_Morata.png",
     textDescription:
       "Die Grabplatte Olympia Morata erinnert an die italienische Dichterin und Humanistin Olympia Fulvia Morata. Sie wurde 1526 in Ferrara geboren und erhielt als erste Frau einen Lehrauftrag an der Universität Heidelberg als Dozentin in Griechisch. Arzt Wilhelm Rascalon stiftete die Grabtafel aus Sandstein, welche dann vermutlich im 19. Jahrhundert in die Universitätskapelle im rechten Seitenschiff der Peterskirche gelangte als die diese zu einer Gedenkstätte für berühmte Heidelberger Gelehrte ausgebaut wurde.",
     learning: "Materialität",
@@ -17,6 +18,7 @@ const artefactData = [
   {
     title: "Unibibliothek: Fassade",
     img: "UB-Fassade.png",
+    url: "https://stadtspaziergang.materiale-textkulturen.de/bilder/titelbilder_400/0002_UB_Fassade.png",
     textDescription:
       'Die Heidelberger Universitätsbibliothek wurde aufgrund des anwachsenden Bücherbesitzes und den daraus folgenden Platzmangel am Ende des 19.Jahrhunderts um einen Neubau erweitert. Er gilt noch heute als markantes Gebäude in der Altstadt. Der ausführende Architekt Josef Durm verfolgte das Ziel die Besonderheit der Bibliothek als "Prachtportal zu den Schätzen der Wissenschaft" zu betonen. Aus diesem Grund ist die Fassade des Hauptportals der Universitätsbibliothek mit aufwändigen Relief-Verzierungen ausgestattet und entspricht damit wörtlich einem Prachtportal.',
     learning: "Kontextgebundenheit",
@@ -31,6 +33,7 @@ const artefactData = [
   {
     title: "Der Lebendige Geist",
     img: "Lebendiger-Geist.png",
+    url: "https://stadtspaziergang.materiale-textkulturen.de/bilder/start/0005_Neue_Uni.png",
     textDescription:
       "Die Entstehung der neuen Universität wurde durch Spenden in den USA ermöglicht. Dies war eine Initiative des amerikanischen Botschafters in Berlin Jacob Gould Shurman, der selbst in Heidelberg studiert hatte. 1930 wurde sie zum ersten Mal für den Vorlesungsbetrieb eröffnet. Ein Jahr später brachte man dann eine Bronzeskulpture der griechischen Göttin Athena, sowie die Widmung “Dem lebendigen Geist” an der Fassade über dem Portal an.",
     learning: "veränderliche Bedeutung",
@@ -45,6 +48,7 @@ const artefactData = [
   {
     title: "Unibibliothek: Innenräume",
     img: "Bodenmosaik-Heidelberg-Uni-Bibliothek.jpg",
+    url: "https://stadtspaziergang.materiale-textkulturen.de/bilder/titelbilder_400/0003_UB%20Innen%201%20Quelle%20der%20Weisheit.png",
     textDescription:
       "Der Eingangsbereich der Universitätsbibliothek ist geziert von goldlastigen Mosaiken und Inschriften, die prachtvoll die Wände (und Böden) schmücken. Der aufwändig geschmückte Durchgangsbereich irritiert, da sich hinter von Mosaik gerahmten Türen “nur” ein schlichtes Informationszentrum für Studenten befindet. Die Geschichte des Gebäudes macht jedoch erkenntlich wieso: Die Bücherbestände waren in der Konzeption des ausgehenden 19.Jahrhunderts nicht zur Selbstbedienung zugänglich. Nur Mitarbeiter hatten Zutritt zum hinteren Teil des Gebäudes, während die Studenten mit den angeforderten Büchern im prunkvollen Lesesaal arbeiteten. Später wurde in den 1980er Jahren im ursprünglichen Lesesaal ein Zwischenboden eingezogen, um nun auf zwei Etagen Serviceflächen anbieten zu können.",
     learning: "Präsenz",
@@ -59,6 +63,7 @@ const artefactData = [
   {
     title: "Unibibliothek: Handschriften",
     img: "UB-Handschriften.png",
+    url: "https://stadtspaziergang.materiale-textkulturen.de/bilder/titelbilder_400/0004_UB_Handschriften.png",
     textDescription:
       "Der Codex Manesse, das wohl prestigeträchtigste Artefakt der Universitätsbibliothek, ist eine Liederhandschriftensammlung, entstanden im frühen 14. Jahrhundert. Im Codex Manesse wurden die mündlich überlieferte Tradition des deutschen Minnegesanges verschriftlicht. Als umfangreichste deutsche Liederhandschrift des Mittelalters umfasst er viele farbenprächtige Illustrationen, die ihn heute so berühmt machen.",
     learning: "Affordanz",
@@ -72,6 +77,7 @@ const artefactData = [
   {
     title: "Uniplatz: Gedenktafel zur Bücherverbrennung",
     img: "Buecherverbrennung.png",
+    url: "https://stadtspaziergang.materiale-textkulturen.de/bilder/titelbilder_400/0007_Buecherverbrennung.png",
     textDescription:
       "Die Gedenktafel zur Bücherverbrennung aus dem Jahr 2011 erinnert an die Zerstörung von Schrift durch die Nazis von 1933. Die Verbrennungen von “undeutschen” Schriften politisch unliebsamer oder jüdischer Autoren, waren Teil der sogenannten “Aktion wider den deutschen Geist” und wurden hauptsächlich von Studenten organisiert. Die Bücherverbrennung in Heidelberg fand am Mittwoch, den 17. Mai auf dem Universitätsplatz statt.",
     learning: "Metaebene",
@@ -88,6 +94,7 @@ const artefactData = [
   {
     title: "Alte Universität Die Alte Aula",
     img: "Alte-Uni.png",
+    url: "https://stadtspaziergang.materiale-textkulturen.de/bilder/titelbilder_400/0009_Alte_Uni.png",
     textDescription:
       "Die Alte Universität stammt aus der Zeit des Wiederaufbaus nach der Zerstörung Heidelbergs 1693 im Pfälzischen Erbfolgekrieg. Sie fungierte vom Beginn des 18 Jahrhunderts bis ins Jahr 1960 als Hauptgebäude der Universität. Für einen gewissen Zeitraum war hier die Universitätsbibliothek untergebracht und auch Feierlichkeiten, reguläre Vorlesungen und politische Veranstaltungen wurden hier abgehalten. Am Eingang zur Alten Universität begegnet man einer schlichten, metallenen Schriftinstallation mit den Worten “Semper apertus”, was übersetzt “Immer offen” bedeutet. Dieser Schriftzug stellt das Universitätsmotto dar.",
     learning: "Kontextgebundenheit: Ort",
@@ -104,6 +111,7 @@ const artefactData = [
   {
     title: "Stolperstein für die Familie Durlacher",
     img: "Stolperstein.png",
+    url: "https://stadtspaziergang.materiale-textkulturen.de/bilder/titelbilder_400/0016_Stolperstein.png",
     textDescription:
       "Die kleinen, in den Boden eingelassene Messingklötze, die als Stolpersteine bezeichnet werden, erinnern an die Opfer des Nationalsozialismus. Sie sind vor den Häusern platziert, in denen die Opfer wohnten oder wirkten. Dabei wird darauf geachtet, dass die Steine vor dem jeweils letzten freiwillig gewählten Wohnsitz der betroffenen Menschen platziert werden. Der Künstler Günter Demnig hat insgesamt in ganz Europa bereits etwa 69.000 Steine verlegt. Einer der bisher 152 verlegten Stolpersteine in Heidelberg, ist der der Familie Durlacher.",
     learning: "Interaktion & Wahrnehmung",
