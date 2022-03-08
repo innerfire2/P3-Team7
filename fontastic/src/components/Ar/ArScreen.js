@@ -117,9 +117,14 @@ export default function ArScreen({ artefactData }) {
           >
             <div className={styles.taskBox}>
               <span>Denkanstoß</span>
-              <p>Verleihe dem Schriftstück deine persönliche Note.</p>
+              <p> {artefactData[0].taskInspo} </p>
               <p>Probier dich aus! </p>
             </div>
+            {/* {artefactData.map(function (artefactData) {
+                return (
+                  <li key={artefactData.id}> {artefactData.taskInspo} </li>
+                );
+              })} */}
 
             <p className={styles.fadeIn}>TIPPE!</p>
           </div>
