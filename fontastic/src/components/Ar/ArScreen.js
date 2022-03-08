@@ -11,8 +11,9 @@ import { IoIosShareAlt } from "react-icons/io";
 import { useState } from "react";
 import ArMode from "./ArMode";
 import { Link } from "react-router-dom";
+// import artefactData from "../../artefactData";
 
-export default function ArScreen() {
+export default function ArScreen({ artefactData }) {
   //using useState to declare an "active"-variable which is used to check if the icon state is active or not
   const [isActive, setActive] = useState(false);
   //using useState for a click count after which is decided when sth new renders
@@ -116,7 +117,7 @@ export default function ArScreen() {
           >
             <div className={styles.taskBox}>
               <span>Denkanstoß</span>
-              <p>Verleihe dem Schriftstück deine persönliche Note. </p>
+              <p>Verleihe dem Schriftstück deine persönliche Note.</p>
               <p>Probier dich aus! </p>
             </div>
 

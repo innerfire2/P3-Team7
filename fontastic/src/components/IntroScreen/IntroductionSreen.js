@@ -12,7 +12,7 @@
 // }
 // import { Link } from "react-router-dom";
 // import Header from "../Header/Header.js";
-import backgroundVideo from "./testVideo.mp4";
+import backgroundVideo from "./fontasticVideoFaster.mp4";
 import styles from "./IntroductionScreen.module.css";
 // import LoadingScreen from "../LoadingScreen/LoadingScreen.js";
 import SkipButton from "../Button/SkipButton";

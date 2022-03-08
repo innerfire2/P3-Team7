@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Header from "../Header/Header.js";
-import backgroundVideo from "./testVideo.mp4";
+import backgroundVideo from "./fontasticVideoFaster.mp4";
 import styles from "./VideoScreen.module.css";
 
 export default function VideoScreen() {
@@ -13,9 +13,9 @@ export default function VideoScreen() {
             <source src={backgroundVideo} type="video/mp4" />
           </video>
         </main>
-        <nav>
+        {/* <nav>
           <Link to="/home">Back to Home</Link>
-        </nav>{" "}
+        </nav>{" "} */}
       </div>
     </>
   );

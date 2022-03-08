@@ -13,6 +13,7 @@ const artefactData = [
       "Neben der Inschrift eines schriftragenden Artefaktes sind auch die Ausgestaltung, das Material und der Anbringungsort von Bedeutung. Vor allem bei Grabinschriften ist das Material entscheidend, da Steininschriften auf Dauerhaftigkeit ausgelegt sind und gewisse optische Merkmale vorweisen. So deutet beispielsweise teurer Marmor auf einen gewissen Stand und damit ein gewisses Ansehen der verstorbenen Person hin.",
     learningText2:
       "Zusätzlich ist auch der Anbringungsort bei diesem Beispiel interessant, da die Grabtafel von Olympia aus ihrem ursprünglichen Kontext entfernt wurde. Zunächst befand sie sich auf dem Friedhof in der Nähe der Gräber ihrer Angehörigen. Durch die  Verlegung in die Peterskirche änderte sich die Erinnerungspraktik der Artefakts von einem familiären Zusammenhang zu einer öffentlichen Erinnerung. Die intellektuellen Leistungen Olympias sollen hervorgehoben werden. So dient die Grabplatte letztendlich gemeinsam mit Erinnerungsstücken anderer Heidelberger Gelehrte  auch Repräsentationszwecken.",
+    taskInspo: "Wie beeinflusst die Materialität den Inhalt der Aussage?",
     id: "Artefact1",
   },
   {
@@ -28,6 +29,8 @@ const artefactData = [
       "Eine weitere Inschrift befindet sich auf der Westfassade. Oben unter dem Schmuckgiebel ist dort der lateinische Schriftzug “inter folia fructus” zu finden. Er bedeutet so viel wie “zwischen den Blättern die Frucht” und kann somit mit der Ostfassade in Verbindung gebracht werden. Der dortige Giebel zeigt nämlich den sogenannten “Weltgeist” mit einem “Lebensbaum” - für uns erkennbar als beblätterte Zweige mit goldenen Früchten. ",
     learningText3:
       "Zusätzlich kann die lateinische Inschrift doppelt gedeutet werden. Denn genau wie das deutsche Wort Blätter kann auch das lateinische Wort folia, sowohl die Blätter eines Baumes als auch die Papierseiten eines Buches bezeichnen. Somit verspricht die Inschrift, dass auch das Lesen von Büchern Früchte tragen kann und lädt letztendlich ein, die Bibliothek zu betreten.",
+    taskInspo:
+      "Ziehe den Schriftzug ins Lächerliche, unterstreiche die Bedeutung des Schriftzuges.",
     id: "Artefact2",
   },
   {
@@ -43,6 +46,7 @@ const artefactData = [
       "Am Beispiel der Fassade der Neuen Universität lässt sich feststellen, wie derselbe Schriftzug zu unterschiedlichen Zeiten von verschiedenen Menschengruppen aufgefasst und behandelt werden kann. Ursprünglich sollte der “lebendige Geist” ein Ideal der Wissenschaft und eine Annahme über die menschliche Natur ausdrücken. In der zweiten Phase wurde er als “undeutsch” empfunden und ersetzt und zuletzt drückt die Wiederherstellung der Inschrift vor allem eine Abgrenzung zur nationalsozialistischen Vergangenheit aus. Die jüngste Installation des Schriftzug wiederum wird von heutigen Studierenden als Repräsentation der Universität aufgefasst.",
     learningText3:
       "So zeigt sich hier, dass Texte und Schriftartefakte nicht nur eine einzige, unveränderliche Bedeutung haben, die man aus ihrem Wortlaut lesen kann. Ihre Bedeutung ergibt sich daraus, wie Menschen mit ihnen umgehen und welchen Sinn sie ihnen zuschreiben.",
+    taskInspo: "Verleihe dem Text deine persönliche Note.",
     id: "Artefact3",
   },
   {
@@ -58,6 +62,8 @@ const artefactData = [
       "Diese Erfahrung kann man noch weiter zuspitzen, denn Schriftstücke haben auch dann eine Wirkung, wenn sie nicht einmal sinnlich wahrgenommen werden können. Ein Beispiel sind Medaillons. Sie müssen nicht jeden Tag geöffnet werden. Alleine die Präsenz eines Fotos oder Schriftstückes, dass sich in ihnen befindet, löst ihrem Träger eine Reaktion aus. Somit entfaltet alleine das Wissen um die Existenz eines Schriftartefakts eine eigene Wirkung auf die Menschen, die mit ihm umgehen. ",
     learningText3:
       "Das Verstehen oder Nichtverstehen eines Schriftzugs kann die Wahrnehmung beeinflussen. Gleichzeitig gilt es sich der Wirkung von Schrift als Symbole bewusst zu machen und erkennen zu können das Schrift immer eine Wirkung hat. ",
+    taskInspo:
+      "Wie wirkt Schrift wenn man sie nicht versteht?Wie verändert sich die Wirkung des Artefakts ohne den Schriftzug?",
     id: "Artefact4",
   },
   {
@@ -71,6 +77,7 @@ const artefactData = [
       "Der Codex Manesse eignet sich hervorragend zur Begriffserklärung des Wortes Affordanz. Es beschreibt “die durch die physischen Eigenschaften eines Gegenstandes vorgegebenen Nutzungsmöglichkeiten. Dieses Konzept stammt von dem amerikanischen Wahrnehmungspsychologen James J. Gibson und geht davon aus, dass Dinge eine Handlung aktiv anbieten. Ein Stuhl bietet beispielsweise an, sich hinzusetzen. Dieses Konzept wird vor allem in der Archäologie verwendet, wo Material, Beschaffenheit, Oberfläche und Form inklusive weitere auch schriftliche Quellen in Betracht gezogen werden, um den Nutzungscharakter eines Objektes zu rekonstruieren. ",
     learningText2:
       "In Bezug auf den Codex Manesse lässt sich zudem feststellen, dass sich die Nutzungsmöglichkeiten eines Objektes im Laufe der Zeit verändern können. Zunächst diente er der Sammlung und Festhaltung mündlicher Minnesänge, was ihn später zu einer Informationsquelle machte. Im Laufe der Zeit entwickelte er sich dann zu einem Prestigeobjekt, dessen Besitz dem eigenen Ansehen nutzte. Heutzutage ist ein Forschungsobjekt, dass analysiert und zur Vermittlung von Geschichte genutzt werden kann.",
+    taskInspo: "Verändere den Text so, dass er nicht mehr zum Lesen einlädt.",
     id: "Artefact5",
     // Cod. Pal. germ. 848, Große Heidelberger Liederhandschrift (Codex Manesse) — Zürich, ca. 1300 bis ca. 1340, S. 124r: Herr Walther von der Vogelweide
   },
@@ -89,6 +96,8 @@ const artefactData = [
       "Gegen Klassenkampf und Materialismus, für Volksgemeinschaft und idealistische Lebenshaltung! Ich übergebe der Flamme die Schriften von Marx und Kautsky.",
     learningText4:
       "Auch die Gedenktafel ist schließlich ein moderner Metatext. Doch auch sie ist in den Jahren seit ihrer Erstellung abgenutzt oder vielleicht sogar mutwillig beschädigt worden.",
+    taskInspo:
+      "Mach die Gedenktafel unleserlich. Welche Gründe fallen dir ein, um ein Schriftstück zu zerstören?",
     id: "Artefact6",
   },
   {
@@ -106,6 +115,8 @@ const artefactData = [
       "Topologisch lässt sich jedoch beobachten, dass die meisten Studierenden durch die Verteilung des Lehrbetriebs auf verschieden andere Hörsäle, selten einen universitären Grund finden die Alte Aula zu besuchen. ",
     learningText4:
       "So richtet sich die repräsentative Wirkung der goldenen Schriftzüge heutzutage vor allem an auswärtige Besucher*innen, da nicht von der Mehrheit der studentischen Mitglieder wahrgenommen werden.",
+    taskInspo:
+      "Wie nehme ich Schrift im Raum war? Wie beeinflusst der Font unsere Erwartungshaltung?",
     id: "Artefact7",
   },
   {
@@ -123,6 +134,7 @@ const artefactData = [
       "Es herrscht Uneinigkeit über die Interaktion mit Stolpersteinen. Man könnte sagen, dass die Menschen, die sich beim Putzen vor ihnen verneigen, einer symbolischen Praktik nachgehen. Kritiker der Gestaltung sind wiederum der Meinung, dass hier symbolisch eine Erinnerung mit Füßen getreten und beschmutzt wird.",
     learningText4:
       "Generell wird die Reaktion jedoch durch das Vorwissen der Menschen beeinflusst.  Jemand, der zum ersten Mal einen Stolperstein sieht, betrachtet diesen vielleicht intensiver und denkt einen Moment über dessen Bedeutung nach, als jemand, dem das Konzept vertraut ist und der sich vielleicht nur fragt, ob die Person überlebt hat oder ermordet wurde.",
+    taskInspo: "Füge eine von dir gewählte Nachricht zu dem Artefakt hinzu.",
     id: "Artefact8",
   },
 ];

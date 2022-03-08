@@ -1,5 +1,6 @@
 import ArtefactScreenOverview from "../ArtefactScreenOverview/ArtefactScreenOverview.js";
 import LoadingScreen from "../LoadingScreen/LoadingScreen.js";
+import ImageGallery from "../ImageGallery/ImageGallery.js";
 import ArScreen from "../Ar/ArScreen.js";
 import ArMode from "../Ar/ArMode.js";
 import VideoScreen from "../Video/VideoScreen.js";
@@ -7,6 +8,7 @@ import About from "../AboutScreen/About.js";
 import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import PulseLoader from "react-spinners/PulseLoader";
+import artefactData from "../../artefactData.js";
 import fontLogo from "./fontastic.png";
 
 import "./App.css";
@@ -80,10 +82,13 @@ function App() {
             <Route exact path="/" element={<IntroductionScreen />} />
             <Route exact path="home" element={<ArtefactScreenOverview />} />
             <Route exact path="about" element={<About />} />{" "}
-            <Route exact path="ImageGallery" element={<ArScreen />} />
+            <Route exact path="ImageGallery" element={<ImageGallery />} />
             <Route path="loadingScreen" element={<LoadingScreen />} />
             <Route path="video" element={<VideoScreen />} />
-            <Route path="ar" element={<ArScreen />} />
+            <Route
+              path="ar"
+              element={<ArScreen artefactData={artefactData} />}
+            />
             {/* <Route path="video" element={<LoadingScreen />} /> */}
             {/* <ArtefactScreenOverview artefactData={artefactData} /> */}
             {/* <ArtefactScreen artefactData={artefactData} /> */}
