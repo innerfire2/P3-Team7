@@ -1,17 +1,26 @@
 /* eslint-disable no-console */
 
 import { useEffect } from "react";
+import styles from "./ArMode.module.css";
 
 export default function ArMode({ whichFunction }) {
   const colors = ["black", "green", "blue", "purple", "red"];
   const fonts = ["Times New Roman", "Verdana", "Helvetica", "Georgia"];
   const sizes = ["10 10 10", "20 20 20", "30 30 30", "40 40 40", "50 50 50"];
+  const languages = [
+    "Dem lebendigen Geist",
+    "To the Living Spirit",
+    "посвященный живому духу",
+    "à l'esprit vivant",
+  ];
+  const positions = [""];
 
-  console.log(whichFunction);
+ 
 
   var colorCounter = 0;
   var fontCounter = 0;
   var sizeCounter = 0;
+  var languageCounter = 0;
 
   function screenClicked() {
     document.querySelector("#plane").setAttribute("material", "fps: 10");
@@ -62,9 +71,15 @@ export default function ArMode({ whichFunction }) {
         .setAttribute("scale", `${sizes[sizeCounter]}`);
     }
 
-    if (whichFunction === "content") {
-      document.querySelector("#arText").innerHTML =
-        "Vielleicht macht ja ein laengerer Text einen Unterschied";
+    if (whichFunction === "language") {
+      if (languageCounter <= languages.length - 2) {
+        languageCounter++;
+      } else {
+        languageCounter = 0;
+      }
+      document.querySelector(
+        "#arText"
+      ).innerHTML = `${languages[languageCounter]}`;
     }
 
     if (whichFunction === "camera") {

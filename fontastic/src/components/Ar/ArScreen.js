@@ -161,9 +161,9 @@ export default function ArScreen() {
 
         <RiTranslate2
           className={`${styles.iconTranslate}${
-            functionState === "translate" && styles.active
+            functionState === "language" && styles.active
           }`}
-          // onClick={() => setFunctionState("translate")}
+          onClick={() => setFunctionState("language")}
         />
 
         <FaCamera
