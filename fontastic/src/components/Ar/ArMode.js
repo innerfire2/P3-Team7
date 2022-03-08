@@ -16,8 +16,6 @@ export default function ArMode({ whichFunction }) {
   function screenClicked() {
     document.querySelector("#plane").setAttribute("material", "fps: 10");
 
-    const arElement = document.querySelector("#planeHTML");
-
     //arElement.style.fontFamily(`${fonts[fontCounter]}`);
 
     if (whichFunction === "color") {
@@ -27,13 +25,13 @@ export default function ArMode({ whichFunction }) {
         colorCounter = 0;
       }
 
+      document.querySelector(
+        "#planeHTML"
+      ).style.color = `${colors[colorCounter]}`;
+
       // document
       //   .querySelector("#planeHTML")
-      //   .style.color(`${colors[colorCounter]}`);
-
-      document
-        .querySelector("#planeHTML")
-        .setAttribute("style", `color: ${colors[colorCounter]}`);
+      //   .setAttribute("style", `color: ${colors[colorCounter]}`);
     }
 
     if (whichFunction === "font") {
@@ -43,9 +41,13 @@ export default function ArMode({ whichFunction }) {
         fontCounter = 0;
       }
 
-      document
-        .querySelector("#planeHTML")
-        .setAttribute("style", `font-family: ${fonts[fontCounter]}`);
+      document.querySelector(
+        "#planeHTML"
+      ).style.fontFamily = `${fonts[fontCounter]}`;
+
+      // document
+      //   .querySelector("#planeHTML")
+      //   .setAttribute("style", `font-family: ${fonts[fontCounter]}`);
     }
 
     if (whichFunction === "size") {
