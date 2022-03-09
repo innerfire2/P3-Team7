@@ -36,7 +36,7 @@ const artefactData = [
   {
     title: "Der Lebendige Geist",
     img: "Lebendiger-Geist.png",
-    url: "https://stadtspaziergang.materiale-textkulturen.de/bilder/start/0005_Neue_Uni.png",
+    url: "https://stadtspaziergang.materiale-textkulturen.de/bilder/titelbilder_400/0005_Neue_Uni.png",
     textDescription:
       "Die Entstehung der neuen Universität wurde durch Spenden in den USA ermöglicht. Dies war eine Initiative des amerikanischen Botschafters in Berlin Jacob Gould Shurman, der selbst in Heidelberg studiert hatte. 1930 wurde sie zum ersten Mal für den Vorlesungsbetrieb eröffnet. Ein Jahr später brachte man dann eine Bronzeskulpture der griechischen Göttin Athena, sowie die Widmung “Dem lebendigen Geist” an der Fassade über dem Portal an.",
     learning: "veränderliche Bedeutung",
