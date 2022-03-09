@@ -44,6 +44,7 @@ export default function ArScreen({ artefactData }) {
 
   console.log(functionState);
   return (
+    //if screen is clicked 4 times show css for Inspo Task (Denkanstoß)
     // if screen is clicked 5 and times enable AR mode, show camera and functions
     //if it's clicked less than 5 times show the regular ArScreen
     // else show containerARModeOn, which means show the camera etc.
