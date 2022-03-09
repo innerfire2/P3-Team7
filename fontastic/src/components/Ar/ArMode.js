@@ -10,14 +10,30 @@ export default function ArMode({ whichFunction }) {
     "посвященный живому духу",
     "à l'esprit vivant",
   ];
-  const positions = [""];
-
- 
+  const positions = [
+    "10 10 10",
+    "20 10 20",
+    "30 10 30",
+    "40 10 40",
+    "20 20 30",
+  ];
 
   var colorCounter = 0;
   var fontCounter = 0;
   var sizeCounter = 0;
   var languageCounter = 0;
+  var positionCounter = 0;
+
+  useEffect(() => {
+    if (
+      window.orientation === "landscape" ||
+      window.orientation === undefined
+    ) {
+      document.querySelector("#plane").setAttribute("scale", "10 10 10");
+    } else {
+      document.querySelector("#plane").setAttribute("scale", "50 10 10");
+    }
+  }, [window.orientation]);
 
   function screenClicked() {
     document.querySelector("#plane").setAttribute("material", "fps: 10");
@@ -66,6 +82,18 @@ export default function ArMode({ whichFunction }) {
       document
         .querySelector("#plane")
         .setAttribute("scale", `${sizes[sizeCounter]}`);
+    }
+
+    if (whichFunction === "position") {
+      if (positionCounter <= positions.length - 2) {
+        positionCounter++;
+      } else {
+        positionCounter = 0;
+      }
+
+      document
+        .querySelector("#plane")
+        .setAttribute("position", `${positions[positionCounter]}`);
     }
 
     if (whichFunction === "language") {

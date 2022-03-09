@@ -98,3 +98,9 @@ body {
   white-space: nowrap;
   font-size: 100px;
 }
+
+@media screen and (orientation: landscape) {
+  #plane {
+    scale: "10 10 10";
+  }
+}
