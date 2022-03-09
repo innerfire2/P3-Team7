@@ -1,7 +1,4 @@
-/* eslint-disable no-console */
-
 import { useEffect } from "react";
-import styles from "./ArMode.module.css";
 
 export default function ArMode({ whichFunction }) {
   const colors = ["black", "green", "blue", "purple", "red"];

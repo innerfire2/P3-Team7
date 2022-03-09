@@ -106,17 +106,6 @@
           smoothTolerance="0.1"
           smoothThreshold="50"
         >
-          <script>
-            if (window.innerHeight < window.innerWidth) {
-              document
-                .querySelector("#plane")
-                .setAttribute("scale", "10 10 10");
-            } else {
-              document
-                .querySelector("#plane")
-                .setAttribute("scale", "50 10 10");
-            }
-          </script>
           <a-plane
             id="plane"
             material="shader: html; target: #planeHTML; ratio: height; fps: 0"
@@ -125,7 +114,7 @@
             scale="50 10 10"
           ></a-plane>
         </a-nft>
-        <a-entity id="camera" camera> </a-entity>
+        <a-entity camera> </a-entity>
       </a-scene>
     </div>
 
