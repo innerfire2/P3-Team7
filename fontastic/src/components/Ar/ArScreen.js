@@ -53,7 +53,9 @@ export default function ArScreen({ artefactData }) {
       </Link>{" "}
       <div
         className={
-          clickCount === 5 && clickCount <= 5
+          clickCount === 4
+            ? styles.backgroundInspo
+            : clickCount === 5 && clickCount <= 5
             ? styles.containerArModeOn
             : clickCount < 5
             ? styles.ArScreen

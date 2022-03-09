@@ -6,6 +6,12 @@
   color: white;
   /* overflow: scroll; */
 }
+.backgroundInspo {
+  position: fixed;
+  /* background-color: rgba(115, 217, 224, 0.74); */
+  height: 100vh;
+  width: 100%;
+}
 
 ´ .content {
   background-color: rgb(127, 140, 255);
