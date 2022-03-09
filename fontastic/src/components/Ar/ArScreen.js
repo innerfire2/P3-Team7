@@ -7,6 +7,7 @@ import { FaFont } from "react-icons/fa";
 import { IoMdColorFill } from "react-icons/io";
 // import { RiTranslate2 } from "react-icons/ri"; //translate into other languages icon
 import { IoLanguage } from "react-icons/io5";
+//import { FaLanguage } from "react-icons/fa";
 import { MdExitToApp } from "react-icons/md";
 import { IoIosShareAlt } from "react-icons/io";
 import { useState } from "react";
@@ -165,9 +166,8 @@ export default function ArScreen({ artefactData }) {
           }`}
           onClick={() => setFunctionState("size")}
         />
-
         <IoLanguage
-          className={`${styles.iconTranslate}${
+          className={`${styles.iconTranslate} ${
             functionState === "language" && styles.active
           }`}
           onClick={() => setFunctionState("language")}
