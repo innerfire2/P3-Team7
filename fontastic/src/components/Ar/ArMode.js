@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 
 export default function ArMode({ whichFunction }) {
+  //data arrays
   const colors = ["black", "green", "blue", "purple", "red"];
   const fonts = ["Times New Roman", "Verdana", "Helvetica", "Georgia"];
   const sizes = ["10 10 10", "20 20 20", "30 30 30", "40 40 40", "50 50 50"];
@@ -10,13 +11,7 @@ export default function ArMode({ whichFunction }) {
     "посвященный живому духу",
     "à l'esprit vivant",
   ];
-  const positions = [
-    "10 10 10",
-    "20 10 20",
-    "30 10 30",
-    "40 10 40",
-    "20 20 30",
-  ];
+  const positions = ["80 0 0", "90 0 0", "80 20 0", "80 0 20", "90 20 20"];
 
   var colorCounter = 0;
   var fontCounter = 0;
@@ -24,22 +19,13 @@ export default function ArMode({ whichFunction }) {
   var languageCounter = 0;
   var positionCounter = 0;
 
-  useEffect(() => {
-    if (
-      window.orientation === "landscape" ||
-      window.orientation === undefined
-    ) {
-      document.querySelector("#plane").setAttribute("scale", "10 10 10");
-    } else {
-      document.querySelector("#plane").setAttribute("scale", "50 10 10");
-    }
-  }, [window.orientation]);
-
   function screenClicked() {
+
+    //makes AR content changeable
     document.querySelector("#plane").setAttribute("material", "fps: 10");
 
-    //arElement.style.fontFamily(`${fonts[fontCounter]}`);
 
+    // functions to change AR content
     if (whichFunction === "color") {
       if (colorCounter <= colors.length - 2) {
         colorCounter++;
@@ -50,10 +36,6 @@ export default function ArMode({ whichFunction }) {
       document.querySelector(
         "#planeHTML"
       ).style.color = `${colors[colorCounter]}`;
-
-      // document
-      //   .querySelector("#planeHTML")
-      //   .setAttribute("style", `color: ${colors[colorCounter]}`);
     }
 
     if (whichFunction === "font") {
@@ -66,10 +48,6 @@ export default function ArMode({ whichFunction }) {
       document.querySelector(
         "#planeHTML"
       ).style.fontFamily = `${fonts[fontCounter]}`;
-
-      // document
-      //   .querySelector("#planeHTML")
-      //   .setAttribute("style", `font-family: ${fonts[fontCounter]}`);
     }
 
     if (whichFunction === "size") {
@@ -108,15 +86,10 @@ export default function ArMode({ whichFunction }) {
     }
 
     if (whichFunction === "camera") {
-      //document.querySelector('a-scene').components.screenshot.getCanvas('perspective');
       document
         .querySelector("a-scene")
         .components.screenshot.capture("perspective");
     }
-  }
-
-  function buttonClicked() {
-    alert(whichFunction);
   }
 
   useEffect(() => {
@@ -126,18 +99,11 @@ export default function ArMode({ whichFunction }) {
       .querySelector("#screenOverlay")
       .addEventListener("click", screenClicked);
 
-    document
-      .querySelector(".say-hi-button")
-      .addEventListener("click", buttonClicked);
-
     return () => {
       document
         .querySelector("#screenOverlay")
         .removeEventListener("click", screenClicked);
 
-      document
-        .querySelector(".say-hi-button")
-        .removeEventListener("click", buttonClicked);
       document.body.classList.remove("camera-active");
     };
   });

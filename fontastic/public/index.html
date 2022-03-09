@@ -56,8 +56,6 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
-    <!-- eslint-disable -->
-
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -81,11 +79,7 @@
       style="position: fixed; top: 0; left: 0; right: 0; bottom: 0"
     >
       <div class="arjs-loader">
-        <div>Loading, please wait...</div>
-      </div>
-
-      <div class="buttons">
-        <button class="say-hi-button">SAY HI!</button>
+        <div>loading...</div>
       </div>
 
       <div id="screenOverlay"></div>
@@ -108,9 +102,9 @@
           <a-plane
             id="plane"
             material="shader: html; target: #planeHTML; ratio: height; fps: 0"
-            position="20 5 -10"
+            position="80 0 0"
             rotation="-90 0 0"
-            scale="50 10 10"
+            scale="20 20 20"
           ></a-plane>
         </a-nft>
         <a-entity camera> </a-entity>
