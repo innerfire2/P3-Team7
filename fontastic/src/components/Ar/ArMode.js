@@ -12,8 +12,6 @@ export default function ArMode({ whichFunction }) {
   ];
   const positions = [""];
 
- 
-
   var colorCounter = 0;
   var fontCounter = 0;
   var sizeCounter = 0;
