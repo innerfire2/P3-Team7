@@ -11,7 +11,7 @@ export default function ArMode({ whichFunction }) {
     "посвященный живому духу",
     "à l'esprit vivant",
   ];
-  const positions = ["80 0 0", "90 0 0", "80 20 0", "80 0 20", "90 20 20"];
+  const positions = ["50 0 0", "60 0 0", "50 20 0", "50 0 20", "30 20 20"];
 
   var colorCounter = 0;
   var fontCounter = 0;
@@ -20,10 +20,8 @@ export default function ArMode({ whichFunction }) {
   var positionCounter = 0;
 
   function screenClicked() {
-
     //makes AR content changeable
     document.querySelector("#plane").setAttribute("material", "fps: 10");
-
 
     // functions to change AR content
     if (whichFunction === "color") {
