@@ -13,6 +13,7 @@
   width: 309px;
   height: 205px;
   margin-top: 30px;
+  z-index: -1;
 }
 .imageContainer > img {
   width: 100%;
