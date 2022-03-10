@@ -19,9 +19,10 @@ export default function ArMode({ whichFunction }) {
   var languageCounter = 0;
   var positionCounter = 0;
 
+  document.querySelector("#plane").setAttribute("material", "fps: 10");
+
   function screenClicked() {
     //makes AR content changeable
-    document.querySelector("#plane").setAttribute("material", "fps: 10");
 
     // functions to change AR content
     if (whichFunction === "color") {
