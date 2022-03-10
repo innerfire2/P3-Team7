@@ -16,7 +16,6 @@ export default function ArtefactScreen({ artefactData, closeHandler }) {
         onClick={closeHandler}
         size={35}
       />
-      {/* <h1>Artefakt</h1> */}
       <div className={styles.imageContainer}>
         <img
           className={styles.photo}

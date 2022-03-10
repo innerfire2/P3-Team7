@@ -89,9 +89,6 @@ function App() {
               path="ar"
               element={<ArScreen artefactData={artefactData} />}
             />
-            {/* <Route path="video" element={<LoadingScreen />} /> */}
-            {/* <ArtefactScreenOverview artefactData={artefactData} /> */}
-            {/* <ArtefactScreen artefactData={artefactData} /> */}
             <Route path="arMode" element={<ArMode />} />
           </Routes>
         )}
@@ -101,9 +98,3 @@ function App() {
 }
 
 export default App;
-
-//INSTALLATION FOR ICONS OF REACT ICONS
-//https://react-icons.github.io/react-icons/icons?name=io5
-// npm install react-icons --save
-// IMPORT
-// import { IconName } from "react-icons/...;
