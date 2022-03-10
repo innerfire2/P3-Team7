@@ -17,10 +17,6 @@ export default function About() {
               Interactive Media Design
             </a>{" "}
             an der Hochschule Darmstadt.
-            {/* Diese App ist unser finales
-            Projekt für das dritte Semester und entstand in Kooperation mit
-            Universität Heidelberg, genauer gesagt mit dem
-            Sonderforschungsbereich Materiale Textkulturen.{" "} */}
           </p>
           <h3>Projekt</h3>
           <p>
@@ -33,8 +29,6 @@ export default function About() {
             "Materiale Textkulturen" .<br></br>
             <br />
             Es stellt das finale Projekt für das dritte Semester dar.
-            {/* Der Leitgedanke, der hinter unserem Projekt stand, war es die
-            Wahrnehmung von Schrift neu zu erlernen. */}
           </p>
         </main>
         <nav>

@@ -1,19 +1,16 @@
 import styles from "./ArScreen.module.css";
 //import react icons
-import { MdFormatSize } from "react-icons/md"; //size function
-import { IoMoveSharp } from "react-icons/io5";
-import { FaCamera } from "react-icons/fa";
-import { FaFont } from "react-icons/fa";
-import { IoMdColorFill } from "react-icons/io";
-// import { RiTranslate2 } from "react-icons/ri"; //translate into other languages icon
-import { IoLanguage } from "react-icons/io5";
-//import { FaLanguage } from "react-icons/fa";
-import { MdExitToApp } from "react-icons/md";
-import { IoIosShareAlt } from "react-icons/io";
+import { MdFormatSize } from "react-icons/md"; //size icon
+import { IoMoveSharp } from "react-icons/io5"; //position icon
+import { FaCamera } from "react-icons/fa"; //camera icon
+import { FaFont } from "react-icons/fa"; //font icon
+import { IoMdColorFill } from "react-icons/io"; //color icon
+import { IoLanguage } from "react-icons/io5"; //language icon
+import { MdExitToApp } from "react-icons/md"; //exit icon
+import { IoIosShareAlt } from "react-icons/io"; //arrow icon
 import { useState } from "react";
 import ArMode from "./ArMode";
 import { Link } from "react-router-dom";
-// import artefactData from "../../artefactData";
 
 export default function ArScreen({ artefactData }) {
   //using useState to declare an "active"-variable which is used to check if the icon state is active or not
@@ -81,7 +78,6 @@ export default function ArScreen({ artefactData }) {
                 : styles.hiddenText
             }
           >
-            {/* <p>Bewege dein Handy, um das Artefakt zu erfassen</p> */}
             <p>
               Hier findest du die <span>AR-Funktionen</span>
             </p>
@@ -125,12 +121,6 @@ export default function ArScreen({ artefactData }) {
               <p> {artefactData[2].taskInspo} </p>
               <p>Probier dich aus! </p>
             </div>
-            {/* {artefactData.map(function (artefactData) {
-                return (
-                  <li key={artefactData.id}> {artefactData.taskInspo} </li>
-                );
-              })} */}
-
             <p className={styles.fadeIn}>TIPPE!</p>
           </div>
         </div>
@@ -191,9 +181,6 @@ export default function ArScreen({ artefactData }) {
 }
 //BEMERKUNG
 // Nach dem fünften Klick auf den Screen erscheint der AR Mode, der background is farblos, die Funktionen (Icons)sind da, aber weiß
-
-// import { IoMdColorFill } from "react-icons/io";
-// import { Link } from "react-router-dom";
 
 //onClick bei den Icons in active State versetzen und dann über css einfärben
 // IoMoveSharp

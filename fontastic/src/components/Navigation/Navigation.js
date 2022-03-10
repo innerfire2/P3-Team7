@@ -1,23 +1,3 @@
-// import { Fade as Hamburger } from "hamburger-react";
-// import { useState } from "react";
-
-// function Navigation() {
-//     const [open, setOpen] = useState(false);
-//   return (
-//     <nav>
-//       <Hamburger
-//         // toggled={open}
-//         // toggle={setOpen}
-//         color="white"
-//         size={26}
-//         label="Menu"
-//         rounded
-//       />
-//     </nav>
-//   );
-// }
-
-// export default Navigation;
 import { Fade as Hamburger } from "hamburger-react";
 import { useState } from "react";
 import NavigationMenu from "../NavigationMenu/NavigationMenu.js";
@@ -39,7 +19,6 @@ function Navigation() {
           size={26}
           label="Menu"
           rounded
-          // onClick={() => setShowMenu(!showMenu)}
         />
       </span>
       {menu}
